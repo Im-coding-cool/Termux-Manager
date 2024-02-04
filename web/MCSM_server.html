@@ -4,8 +4,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
-  <meta name="author" content="-" />
-  
+  <meta name="author" content="陈旺" />
+  <!-- Bootstrap引用 -->
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
   <script src="/static/js/MCSM_server.js"></script>
   <style>
     .container {
@@ -40,12 +46,10 @@
       <div class="card-body">
         <div class="row">
           <div class="col-sm-6">
-            <button onclick="sendGetRequestAndReloadPage('/api?type=mcsm_off_on&call=no')"
-              class="btn btn-primary">开启服务</button>
+            <button onclick="sendGetRequestAndReloadPage('/api?type=mcsm_off_on&call=no')" class="btn btn-primary">开启服务</button>
           </div>
           <div class="col-sm-6">
-            <button onclick="sendGetRequestAndReloadPage('/api?type=mcsm_off_on&call=off')"
-              class="btn btn-danger">关闭服务</button>
+            <button onclick="sendGetRequestAndReloadPage('/api?type=mcsm_off_on&call=off')" class="btn btn-danger">关闭服务</button>
           </div>
         </div>
       </div>

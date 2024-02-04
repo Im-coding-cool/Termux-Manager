@@ -2,68 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frp设置</title>
-    <style>
-        .log-container {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            max-height: 300px;
-            overflow-y: auto;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>后台管理系统</title>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .log-container {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
 
-        .log-entry {
-            margin-bottom: 8px;
-            padding: 8px;
-            border-radius: 3px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+    .log-entry {
+      margin-bottom: 8px;
+      padding: 8px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        .timestamp {
-            color: #888;
-            margin-right: 5px;
-        }
+    .timestamp {
+      color: #888;
+      margin-right: 5px;
+    }
 
-        .message {
-            color: #333;
-        }
-    </style>
+    .message {
+      color: #333;
+    }
+  </style>
 </head>
 
 <body>
-    <div>
-        <h4>服务状态:</h4>
-        <h4>{{ state }}</h4>
+  <div class="container mt-3">
+    <!-- 服务状态卡片 -->
+    <div class="card mb-3">
+      <div class="card-header">服务状态</div>
+      <div class="card-body">
+        <h5 class="card-title">{{ state }}</h5>
+      </div>
     </div>
-    <div>开关
-        <div>
-            <button onclick="sendGetRequestAndReloadPage('/')">开启</button>
-        </div>
-        <div>
-            <button onclick="sendGetRequestAndReloadPage('/')">关闭</button>
-        </div>
-        <div>
-            <button onclick="sendGetRequestAndReloadPage('/')">重启</button>
-        </div>
+
+    <!-- 开关按钮组 -->
+    <div class="mb-3">
+      <div class="btn-group" role="group" aria-label="Control Buttons">
+        <button type="button" class="btn btn-success" onclick="sendGetRequestAndReloadPage('/')"><i class="fas fa-play"></i> 开启</button>
+        <button type="button" class="btn btn-danger" onclick="sendGetRequestAndReloadPage('/')"><i class="fas fa-stop"></i> 关闭</button>
+        <button type="button" class="btn btn-warning" onclick="sendGetRequestAndReloadPage('/')"><i class="fas fa-sync-alt"></i> 重启</button>
+      </div>
     </div>
-    <div>
+
+    <!-- 配置文件表单 -->
+    <div class="card mb-3">
+      <div class="card-header">配置文件</div>
+      <div class="card-body">
         <form action="Hdemo01.html" method="post">
-            <p>配置文件:<input type="text" name="username" style="width: 200px;"></p>
-            <p>
-                <input type="submit" value="保存">
-            </p>
+          <div class="form-group">
+            <label for="configFile">文件路径:</label>
+            <input type="text" class="form-control" id="configFile" name="username">
+          </div>
+          <button type="submit" class="btn btn-primary">保存</button>
         </form>
+      </div>
     </div>
-    <div>日志:
+
+    <!-- 日志展示区域 -->
+    <div class="card">
+      <div class="card-header">日志</div>
+      <div class="card-body">
         <div class="log-container">
-            <div class="log-entry">
-                <span class="timestamp">我是日志内容</span>
-            </div>
+          <div class="log-entry">
+            <span class="timestamp">我是日志内容</span>
+          </div>
+          <!-- 更多日志条目可以在这里添加 -->
         </div>
+      </div>
     </div>
+  </div>
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

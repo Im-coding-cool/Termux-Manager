@@ -1,56 +1,58 @@
-<!DOCTYPE html">
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="/static/css/Login.css">
-    
-</head>
-
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>登录页面</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 引入 FontAwesome 图标库 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        @page {
-            margin-left: 0.7in;
-            margin-right: 0.7in;
-            margin-top: 0.75in;
-            margin-bottom: 0.75in;
-        }
-
         body {
-            margin-left: 0.7in;
-            margin-right: 0.7in;
-            margin-top: 0.75in;
-            margin-bottom: 0.75in;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-control, .btn {
+            margin-top: 10px;
         }
     </style>
-    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
-        <col class="col0">
-        <col class="col1">
-        <col class="col2">
-        <form action="." method="get">
-            <tbody>
-                <tr class="row0">
-                    <td class="column0 style1 s style3" colspan="3">登录</td>
-                </tr>
-                <tr class="row1">
-                    <td class="column0 style4 s style6" colspan="3">{{ context|safe }}</td>
-                </tr>
-                <tr class="row2">
-                    <td class="column0 style7 s">用户名：</td>
-                    <td class="column1 style5 s style6" colspan="2"><input type="text" name="name"></td>
-                </tr>
-                <tr class="row3">
-                    <td class="column0 style8 s">密钥：</td>
-                    <td class="column1 style9 s style10" colspan="2"><input type="text" name="key"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" value="登录">
-                    </td>
-                </tr>
-            </tbody>
-        </form>
-    </table>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-container">
+                    {{ context|safe }}
+                    <h2 class="mb-3">用户登录</h2>
+                    <form action="." method="get">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="用户名">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="key" placeholder="密码">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">登录</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 引入 jQuery 和 Bootstrap JS -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
-
 </html>

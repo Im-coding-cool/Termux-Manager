@@ -7,61 +7,15 @@
   <meta name="author" content="陈旺" />
   <link rel="stylesheet" type="text/css" href="/static/css/function_list.css">
   <!-- 引入Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
-  <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">后台管理系统</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/menu"><i class="fas fa-home"></i> 首页</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="serversDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-server"></i> 服务器管理
-          </a>
-          <div class="dropdown-menu" aria-labelledby="serversDropdown">
-            <a class="dropdown-item" href="/MCSM_server">MCSM面板</a>
-            <a class="dropdown-item" href="/Java_server">Java服务器</a>
-            <a class="dropdown-item" href="/web_server">网站</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="containersDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-database"></i> 容器管理
-          </a>
-          <div class="dropdown-menu" aria-labelledby="containersDropdown">
-            <a class="dropdown-item dropdown-toggle" href="#" id="prootContainerDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Proot容器
-            </a>
-            <div class="dropdown-menu" aria-labelledby="prootContainerDropdown">
-              <a class="dropdown-item" href="/proot_server">管理</a>
-              <a class="dropdown-item" href="/proot_server/settings">设置</a>
-            </div>
-            <a class="dropdown-item" href="/qemu_server">Qemu管理</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/frp_server"><i class="fas fa-network-wired"></i> Frp内网穿透</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/panel_settings"><i class="fas fa-cogs"></i> 面板设置</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
   <div class="container">
     <h1>功能菜单</h1>
 
@@ -132,12 +86,6 @@
       </div>
     </div>
   </div>
-
-  <!-- 引入Bootstrap JS -->
-  <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

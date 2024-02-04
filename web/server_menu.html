@@ -1,165 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>后台管理系统</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        @page {
-            margin-left: 0in;
-            margin-right: 0in;
-            margin-top: 0in;
-            margin-bottom: 0in;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>后台管理系统</title>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    @page {
+      margin-left: 0in;
+      margin-right: 0in;
+      margin-top: 0in;
+      margin-bottom: 0in;
+    }
 
-        body {
-            margin-left: 0in;
-            margin-right: 0in;
-            margin-top: 0in;
-            margin-bottom: 0in;
-        }
-        
-        .navbar {
-            background-color: #333;
-        }
+    body {
+      margin-left: 0in;
+      margin-right: 0in;
+      margin-top: 0in;
+      margin-bottom: 0in;
+    }
 
-        .navbar-brand {
-            color: #fff;
-        }
+    .navbar {
+      background-color: #333;
+    }
 
-        .navbar-nav .nav-link {
-            color: #fff;
-        }
+    .navbar-brand {
+      color: #fff;
+    }
 
-        .navbar-nav .nav-link:hover {
-            color: #ccc;
-        }
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
 
-        .dropdown-menu .dropdown-item {
-            color: #212529;
-        }
+    .navbar-nav .nav-link:hover {
+      color: #ccc;
+    }
 
-        .dropdown-menu .dropdown-item:hover {
-            background-color: #f8f9fa;
-        }
+    .dropdown-menu .dropdown-item {
+      color: #212529;
+    }
 
-        .content {
-            margin-top: 30px;
-        }
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #f8f9fa;
+    }
 
-        .btn {
-            margin-right: 10px;
-        }
-    </style>
+    .content {
+      margin-top: 30px;
+    }
+
+    .btn {
+      margin-right: 10px;
+    }
+  </style>
 </head>
+
 <body>
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">后台管理系统</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/menu"><i class="fas fa-home"></i> 首页</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="serversDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-server"></i> 服务器管理
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="serversDropdown">
-                        <a class="dropdown-item" href="/MCSM_server">MCSM面板</a>
-                        <a class="dropdown-item" href="/Java_server">Java服务器</a>
-                        <a class="dropdown-item" href="/web_server">网站</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="containersDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-database"></i> 容器管理
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="containersDropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" id="prootContainerDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Proot容器
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="prootContainerDropdown">
-                            <a class="dropdown-item" href="/proot_server">管理</a>
-                            <a class="dropdown-item" href="/proot_server/settings">设置</a>
-                        </div>
-                        <a class="dropdown-item" href="/qemu_server">Qemu管理</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/frp_server"><i class="fas fa-network-wired"></i> Frp内网穿透</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/panel_settings"><i class="fas fa-cogs"></i> 面板设置</a>
-                </li>
-            </ul>
-        </div>
-    </header>
-
-    <div class="container-fluid">
-        <div class="content">
-            <h2 class="text-center">服务器相关功能</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">MCSM面板</h5>
-                            <p class="card-text">管理Minecraft服务器和插件</p>
-                            <a href="/MCSM_server" class="btn btn-primary btn-block">进入面板</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Java服务器</h5>
-                            <p class="card-text">在Termux中直接运行的Java服务器</p>
-                            <a href="/Java_server" class="btn btn-primary btn-block">进入服务器</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">网站</h5>
-                            <p class="card-text">管理和部署网站</p>
-                            <a href="/web_server" class="btn btn-primary btn-block">进入网站管理</a>
-                        </div>
-                    </div>
-                </div>
+  <div class="container-fluid">
+    <div class="content">
+      <h2 class="text-center">服务器相关功能</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">MCSM面板</h5>
+              <p class="card-text">管理Minecraft服务器和插件</p>
+              <a href="/MCSM_server" class="btn btn-primary btn-block">进入面板</a>
             </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">查看网络配置</h5>
-                            <p class="card-text">查看服务器的网络配置信息</p>
-                            <a href="/network_settings" class="btn btn-primary btn-block">查看网络配置</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="text-muted text-center mt-4">注：如有其他功能需求，请联系QQ1703214369</p>
+          </div>
         </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Java服务器</h5>
+              <p class="card-text">在Termux中直接运行的Java服务器</p>
+              <a href="/Java_server" class="btn btn-primary btn-block">进入服务器</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">网站</h5>
+              <p class="card-text">管理和部署网站</p>
+              <a href="/web_server" class="btn btn-primary btn-block">进入网站管理</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">查看网络配置</h5>
+              <p class="card-text">查看服务器的网络配置信息</p>
+              <a href="/network_settings" class="btn btn-primary btn-block">查看网络配置</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-muted text-center mt-4">注：如有其他功能需求，请联系QQ1703214369</p>
     </div>
-
-    <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdn.bootcss.com/@popperjs/core/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('collapsed'); // 切换收起状态
-        }
-    </script>
+  </div>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('collapsed'); // 切换收起状态
+    }
+  </script>
 </body>
+
 </html>
