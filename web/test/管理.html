@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .menu {
+            background-color: #333;
+            color: #fff;
+            width: 200px; /* 菜单宽度 */
+            padding-right: 10px;
+            transition: width 0.5s; /* 添加过渡效果 */
+            overflow: hidden; /* 隐藏溢出内容 */
+        }
+        .menu.collapsed {
+            width: 60px; /* 收起时的宽度 */
+        }
+        .content {
+            flex: 1;
+            text-align: center;
+            border-left: 2px solid #ccc; /* 添加左侧边框作为分割线 */
+            padding-left: 10px;
+        }
+        .submenu {
+            display: none;
+            padding-left: 20px; /* 缩进子菜单 */
+        }
+        .menu-item:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="menu">
+            <button onclick="toggleMenu()">收起/展开</button>
+            <ul>
+                <li class="menu-item">菜单项1
+                    <ul class="submenu">
+                        <li>子菜单1</li>
+                        <li>子菜单2</li>
+                    </ul>
+                </li>
+                <li class="menu-item">菜单项2
+                    <ul class="submenu">
+                        <li>子菜单3
+                            <ul class="submenu">
+                                <li>子菜单5</li>
+                                <li>子菜单6</li>
+                            </ul>
+                        </li>
+                        <li>子菜单4</li>
+                    </ul>
+                </li>
+                <!-- 添加更多菜单项 -->
+            </ul>
+        </div>
+        <div class="content">
+            <!-- 这里放中间内容 -->
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('collapsed'); // 切换收起状态
+        }
+    </script>
+</body>
+</html>

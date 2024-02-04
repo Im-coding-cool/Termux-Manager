@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frp设置</title>
+    <style>
+        .log-container {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .log-entry {
+            margin-bottom: 8px;
+            padding: 8px;
+            border-radius: 3px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .timestamp {
+            color: #888;
+            margin-right: 5px;
+        }
+
+        .message {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h4>服务状态:</h4>
+        <h4>{{ state }}</h4>
+    </div>
+    <div>开关
+        <div>
+            <button onclick="sendGetRequestAndReloadPage('/')">开启</button>
+        </div>
+        <div>
+            <button onclick="sendGetRequestAndReloadPage('/')">关闭</button>
+        </div>
+        <div>
+            <button onclick="sendGetRequestAndReloadPage('/')">重启</button>
+        </div>
+    </div>
+    <div>
+        <form action="Hdemo01.html" method="post">
+            <p>配置文件:<input type="text" name="username" style="width: 200px;"></p>
+            <p>
+                <input type="submit" value="保存">
+            </p>
+        </form>
+    </div>
+    <div>日志:
+        <div class="log-container">
+            <div class="log-entry">
+                <span class="timestamp">我是日志内容</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

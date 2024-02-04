@@ -1,0 +1,1 @@
+proot -0 -r $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/ -b /dev -b /sys -b /proc -w /root /usr/bin/env -i HOME=/root TERM=xterm-256color PATH=/bin:/usr/bin:/sbin:/usr/sbin /bin/bash -c "cd /hostroot/opt/mcsmanager/ && ./start-daemon.sh & ./start-web.sh & ls"

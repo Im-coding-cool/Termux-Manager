@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            /* 菜单宽度 */
+            padding-right: 10px;
+            transition: width 0.5s;
+            /* 添加过渡效果 */
+            overflow: hidden;
+            /* 隐藏溢出内容 */
+        }
+
+        .menu.collapsed {
+            width: 60px;
+            /* 收起时的宽度 */
+        }
+
+        .content {
+            flex: 1;
+            text-align: center;
+
+            /* border-left: 2px solid #ccc; */
+            /* 添加左侧边框作为分割线 */
+            
+            padding-left: 10px;
+        }
+
+        /* .submenu {
+            display: none;
+            padding-left: 20px; */
+        /* 缩进子菜单 */
+        /* }
+
+        .menu-item:hover .submenu {
+            display: block;
+        } */
+        button {
+            /* margin-top: 10px; */
+            /* padding: 10px; */
+            /* width: 100%; */
+            /* box-sizing: border-box; */
+            border: 1px solid #c5c210;
+            /* border-radius: 5px; */
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+        <button onclick="toggleMenu()">+菜单</button>
+    <div class="container">
+        <div class="menu" id="menu" hidden="true">
+            <ul>
+                <li><button onclick="window.location.href='/menu'">首页</button></li>
+                <li><button type="button" onclick="show('ul1')">+服务器管理</button>
+                    <ul id="ul1" hidden="true">
+                        <li><button onclick="window.location.href='/MCSM_server'">MCSM面板</button></li>
+                        <li><button onclick="window.location.href='/MCSM_server'">Java服务器</button></li>
+                        <li><button onclick="window.location.href='/MCSM_server'">网站</button></li>
+                    </ul>
+                </li>
+                <li><button type="button" onclick="show('ul2')">+容器管理</button>
+                    <ul id="ul2" hidden="true">
+                        <li><button type="button" onclick="show('ul2-3')">+Proot容器</button>
+                            <ul id="ul2-3" hidden="true">
+                                <li><button onclick="window.location.href='/server_menu'">管理</button></li>
+                                <li><button onclick="window.location.href='/server_menu'">设置</button></li>
+                            </ul>
+                        </li>
+                        <li><button onclick="window.location.href='/server_menu'">Qemu管理</button></li>
+                    </ul>
+                </li>
+                <li><button onclick="window.location.href='/server_menu'">Frp内网穿透</button></li>
+                <li><button onclick="window.location.href='/server_menu'">面板设置</button></li>
+                <!-- 添加更多菜单项 -->
+            </ul>
+        </div>
+        <div class="content">
+            <!-- 这里放中间内容 -->
+            <!-- {{ content|safe }} -->
+            {% include con %}
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            // var menu = document.getElementById('menu');
+            // menu.classList.toggle('collapsed'); // 切换收起状态
+            show("menu");
+        }
+
+        function show(iid) {
+            var t = document.getElementById(iid);//选取id为test的元素
+            if (t.hidden == true) {
+                t.hidden = false;
+            } else {
+                t.hidden = true; // 设置隐藏元素  
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

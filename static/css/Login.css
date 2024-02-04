@@ -1,0 +1,361 @@
+html {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    background-color: white
+}
+
+a.comment-indicator:hover+div.comment {
+    background: #ffd;
+    position: absolute;
+    display: block;
+    border: 1px solid black;
+    padding: 0.5em
+}
+
+a.comment-indicator {
+    background: red;
+    display: inline-block;
+    border: 1px solid black;
+    width: 0.5em;
+    height: 0.5em
+}
+
+div.comment {
+    display: none
+}
+
+table {
+    border-collapse: collapse;
+    page-break-after: always
+}
+
+.gridlines td {
+    border: 1px dotted black
+}
+
+.gridlines th {
+    border: 1px dotted black
+}
+
+.b {
+    text-align: center
+}
+
+.e {
+    text-align: center
+}
+
+.f {
+    text-align: right
+}
+
+.inlineStr {
+    text-align: left
+}
+
+.n {
+    text-align: right
+}
+
+.s {
+    text-align: left
+}
+
+td.style0 {
+    vertical-align: bottom;
+    border-bottom: none #000000;
+    border-top: none #000000;
+    border-left: none #000000;
+    border-right: none #000000;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: white
+}
+
+th.style0 {
+    vertical-align: bottom;
+    border-bottom: none #000000;
+    border-top: none #000000;
+    border-left: none #000000;
+    border-right: none #000000;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: white
+}
+
+td.style1 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 2px dashed #0070C0 !important;
+    border-left: 2px dashed #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #FFC000
+}
+
+th.style1 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 2px dashed #0070C0 !important;
+    border-left: 2px dashed #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #FFC000
+}
+
+td.style2 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 2px dashed #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #FFC000
+}
+
+th.style2 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 2px dashed #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #FFC000
+}
+
+td.style3 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 2px dashed #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 2px dashed #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #FFC000
+}
+
+th.style3 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 2px dashed #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 2px dashed #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #FFC000
+}
+
+td.style4 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 2px dashed #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+th.style4 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 2px dashed #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+td.style5 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+th.style5 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+th.style6 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 2px dashed #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+td.style7 {
+    width: 20%;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 0px;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 2px dashed #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+th.style7 {
+    width: 20%;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 0px;
+    border-bottom: 1px solid #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 2px dashed #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+td.style8 {
+    width: 20%;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 0px;
+    border-bottom: 2px dashed #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 2px dashed #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+th.style8 {
+    width: 20%;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 0px;
+    border-bottom: 2px dashed #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 2px dashed #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+td.style9 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 2px dashed #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+th.style9 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 2px dashed #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 1px solid #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+td.style10 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 2px dashed #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 2px dashed #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+th.style10 {
+    vertical-align: bottom;
+    text-align: center;
+    border-bottom: 2px dashed #0070C0 !important;
+    border-top: 1px solid #0070C0 !important;
+    border-left: 1px solid #0070C0 !important;
+    border-right: 2px dashed #0070C0 !important;
+    color: #000000;
+    font-family: '等线';
+    font-size: 11pt;
+    background-color: #DEEAF6
+}
+
+table.sheet0 col.col0 {
+    width: 100%
+}
+
+table.sheet0 col.col1 {
+    width: 100%
+}
+
+table.sheet0 col.col2 {
+    width: 100%
+}
+
+table.sheet0 tr {
+    height: 15pt
+}
+
+table.sheet0 tr.row3 {
+    height: 15pt
+}

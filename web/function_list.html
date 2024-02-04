@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+  <meta name="author" content="陈旺" />
+  <link rel="stylesheet" type="text/css" href="/static/css/function_list.css">
+  <!-- 引入Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">后台管理系统</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/menu"><i class="fas fa-home"></i> 首页</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="serversDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-server"></i> 服务器管理
+          </a>
+          <div class="dropdown-menu" aria-labelledby="serversDropdown">
+            <a class="dropdown-item" href="/MCSM_server">MCSM面板</a>
+            <a class="dropdown-item" href="/Java_server">Java服务器</a>
+            <a class="dropdown-item" href="/web_server">网站</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="containersDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-database"></i> 容器管理
+          </a>
+          <div class="dropdown-menu" aria-labelledby="containersDropdown">
+            <a class="dropdown-item dropdown-toggle" href="#" id="prootContainerDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Proot容器
+            </a>
+            <div class="dropdown-menu" aria-labelledby="prootContainerDropdown">
+              <a class="dropdown-item" href="/proot_server">管理</a>
+              <a class="dropdown-item" href="/proot_server/settings">设置</a>
+            </div>
+            <a class="dropdown-item" href="/qemu_server">Qemu管理</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/frp_server"><i class="fas fa-network-wired"></i> Frp内网穿透</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/panel_settings"><i class="fas fa-cogs"></i> 面板设置</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>功能菜单</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">工具介绍(作者的话)</h5>
+            <p class="card-text">戳我查看</p>
+            <a href="/User_Agreement.txt" class="btn btn-primary">查看</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">服务器管理</h5>
+            <p class="card-text">包括web服务器，MC服务器，元神服务器...</p>
+            <button onclick="window.location.href='/server_menu'" class="btn btn-primary">进入</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Proot容器管理</h5>
+            <button onclick="window.location.href='/1'" class="btn btn-primary">进入</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Frp内网穿透</h5>
+            <button onclick="window.location.href='/1'" class="btn btn-primary">进入</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Termux配置</h5>
+            <button onclick="window.location.href='/1'" class="btn btn-primary">进入</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <p>注：如有其他功能需要请联系QQ1703214369</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入Bootstrap JS -->
+  <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
