@@ -49,9 +49,9 @@
     <!-- 开关按钮组 -->
     <div class="mb-3">
       <div class="btn-group" role="group" aria-label="Control Buttons">
-        <button type="button" class="btn btn-success" onclick="sendGetRequestAndReloadPage('/')"><i class="fas fa-play"></i> 开启</button>
-        <button type="button" class="btn btn-danger" onclick="sendGetRequestAndReloadPage('/')"><i class="fas fa-stop"></i> 关闭</button>
-        <button type="button" class="btn btn-warning" onclick="sendGetRequestAndReloadPage('/')"><i class="fas fa-sync-alt"></i> 重启</button>
+        <button type="button" class="btn btn-success" onclick="sendGetRequestAndReloadPage('/api?type=frp&call=no')"><i class="fas fa-play"></i> 开启</button>
+        <button type="button" class="btn btn-danger" onclick="sendGetRequestAndReloadPage('/api?type=frp&call=off')"><i class="fas fa-stop"></i> 关闭</button>
+        <button type="button" class="btn btn-warning" onclick="sendGetRequestAndReloadPage('/api?type=frp&call=no')"><i class="fas fa-sync-alt"></i> 重启</button>
       </div>
     </div>
 

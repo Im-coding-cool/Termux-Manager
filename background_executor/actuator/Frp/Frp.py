@@ -77,6 +77,9 @@ def receive():
                                     
                                     # 提交数据
                                     client_socket.send(json.dumps(message_data).encode() + '##END##'.encode())
+                            elif data['name'] == 'frp_write':
+                                with open('frpc.toml', 'w') as f:
+                                    f.write(data['data'])
                         except:
                             print('检测到消息：', message ,'但没有正确识别.')
         except:
