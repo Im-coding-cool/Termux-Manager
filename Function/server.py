@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from api.api import request_result
 from api.p_rint import print_p
+from api.wprint import wprint
 
 def server_menu(request):
     # 服务器功能选择菜单
@@ -14,9 +15,8 @@ def MCSM_server(request): # MCSM管理
         'request_type' : 'check', # 请求类型 task(任务) check(查看)
     }
     # 获取运行状态
-    try:
-        data = request_result(message_data)
-    except:
+    data = request_result(message_data)
+    if data == '连接错误':
         data = '连接出错'
     while True:
         try:
@@ -26,14 +26,21 @@ def MCSM_server(request): # MCSM管理
             elif data[0]['switch'] == 'off':
                 data = '已关闭'
                 break
+            elif data == '超时':
+                data = '状态获取失败,超时'
+                break
+            elif data == '连接出错':
+                data = '连接出错'
+                break
         except:
             if data == '超时':
                 data = '状态获取失败,超时'
                 break
             elif data == '连接出错':
                 data = '连接出错'
+                break
             
-    return render(request, 'function_menu.html', {'con' : "MCSM_server.html", 'state' : data})
+    return render(request, 'MCSM_server.html', {'con' : "function_menu.html", 'state' : data})
 
 # Frp管理
 def Frp_server(request):
