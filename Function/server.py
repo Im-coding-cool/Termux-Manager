@@ -14,7 +14,10 @@ def MCSM_server(request): # MCSM管理
         'request_type' : 'check', # 请求类型 task(任务) check(查看)
     }
     # 获取运行状态
-    data = request_result(message_data)
+    try:
+        data = request_result(message_data)
+    except:
+        data = '连接出错'
     while True:
         try:
             if data[0]['switch'] == 'on':
