@@ -35,3 +35,4 @@ def MCSM_server(request): # MCSM管理
 # Frp管理
 def Frp_server(request):
     pass
+    return render(request, 'Frp.html') # , {'con' : "MCSM_server.html", 'state' : data}
