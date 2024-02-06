@@ -50,13 +50,15 @@ def receive():
                                         print('操作3')
                                         # 开启
                                         if switch.state() != 'on':
-                                            switch.switch('on')
+                                            # switch.switch('on')
+                                            pass
                                     elif data['data'][0]['switch'] == 'off':
                                         print('操作4')
                                         # 关闭
                                         print(switch.state())
                                         if switch.state() != 'off':
-                                            switch.switch('off')
+                                            # switch.switch('off')
+                                            pass
                                 elif data['request_type'] == 'check':
                                     print('操作5')
                                     # 初始化参数
