@@ -1,0 +1,30 @@
+body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .triangle-icon {
+      color: #dc3545;
+      font-size: 5em;
+    }
+    
+    #logOutput {
+    /* 设置高度和滚动 */
+    height: 300px; /* 或根据需要调整 */
+    overflow-y: auto;
+    
+    /* 边框和背景 */
+    border: 1px solid #ced4da; /* 使用Bootstrap的边框颜色 */
+    background-color: #f8f9fa; /* 浅灰色背景，稍微深于 bg-light */
+    
+    /* 文本样式 */
+    color: #343a40; /* 深色文本 */
+    font-family: monospace; /* 使用等宽字体提升日志的可读性 */
+    
+    /* 内边距 */
+    padding: 1rem;
+    
+    /* 圆角 */
+    border-radius: 0.25rem;
+}
