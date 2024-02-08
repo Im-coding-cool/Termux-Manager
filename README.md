@@ -22,7 +22,7 @@ For example:
 
  Manage termux (including zerotermux &utermux),
  Use the MCSM panel to set up a server.(Not only Minecraft servers),
- Build a website.
+ Build a website,
  Genshin Impact servers, etc.
 
 Note: This is an unfinished project.
