@@ -1,13 +1,17 @@
 from flask import Flask, request, jsonify
 import json
-import wprint
 import os
 import re
 import time
 import threading
 
+import wprint
+import actuator.Frp.Frp as frp
+
+
+
 # 数据交换目录
-根目录 = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\test\\data'
+根目录 = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\data'
 
 # 临时储存返回结果
 return_res = 'f'
@@ -33,14 +37,14 @@ app.debug = True
 
 
 # 获取返回结果
-def return_results():
+def return_results(type):
     global return_res
     global tie
     i = 0
     while tie > 0:
         file_list = os.listdir(根目录)
         for file in file_list:
-            if 'mcsm_return' in file:
+            if type in file:
                 result = re.search(r'-(.*?)-', file)
                 if result:
                     wprint.wprint(result.group(1))
@@ -48,7 +52,7 @@ def return_results():
                         try:
                             with open(根目录 + '\\' + file, 'r') as f:
                                 data = json.load(f)
-                            os.remove(根目录 + '\\-1-mcsm_return.json')
+                            os.remove(根目录 + '\\-1-' + type + '.json')
                             return_res = data
                             i = 1
                             break
@@ -65,7 +69,7 @@ def task_processor(student_json):
     global tie
     global return_res
     mc = student_json
-    if mc["name"] == 'mcsm_sw' :
+    if mc["name"] == 'mcsm_sw' : # MCSM面板相关
         if mc['request_type'] == 'task':
             wprint.wprint('mcsm_执行任务')
             file_list = os.listdir(根目录)
@@ -96,7 +100,7 @@ def task_processor(student_json):
             tie = 5
             return_res = 'f'
             wprint.wprint('线程1')
-            thread1 = threading.Thread(target=return_results)
+            thread1 = threading.Thread(target=return_results, args=('mcsm_return',))
             thread1.start() # 获取返回结果
 
             wprint.wprint('线程2')
@@ -112,9 +116,20 @@ def task_processor(student_json):
             
             thread1.join()
             return student_json
-    elif mc['name'] == '???':
-        pass
- 
+    elif mc['name'] == 'frp_sw': # frp相关
+        if mc['request_type'] == 'task':
+            wprint.wprint('frp_执行任务')
+            frp.执行(mc)
+            return student_json
+        elif mc['request_type'] == 'check':
+            wprint.wprint('frp_查看状态')
+            student_json = frp.执行(mc)
+            return student_json
+        elif mc['request_type'] == 'revise':
+            wprint.wprint('frp_修改配置')
+            frp.执行(mc)
+            return student_json
+
 @app.route('/api',methods=['post'])
 def add_stu():
     if  not request.data:   #检测是否有数据

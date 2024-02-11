@@ -26,7 +26,22 @@ def MCSM_server(request): # MCSM管理
             
     return render(request, 'MCSM_server.html', {'con' : "function_menu.html", 'state' : data})
 
-# Frp管理
+# Frp管理   
 def Frp_server(request):
-    pass
-    return render(request, 'Frp.html', {'con' : "function_menu.html", 'state' : '测试'})
+    na = 'server.py里的MCSM_server'
+    message_data = {
+        'name' : 'frp_sw', # 名称 mcsm_sw
+        'request_type' : 'check', # 请求类型 task(任务) check(查看)
+    }
+    # 获取运行状态
+    data = request_result(message_data)
+    if '超时' in data:
+        state = '连接超时，状态拉取失败'
+    else:
+        if data['data'][0]['switch'] == 'off':
+            state = '服务关闭'
+        elif data['data'][0]['switch'] == 'on':
+            state = '服务运行中'
+    config = data['data'][0]['config'].replace('\n', '\\n')
+
+    return render(request, 'Frp.html', {'con' : "function_menu.html", 'state' : state, 'config' : config})

@@ -2,12 +2,16 @@ import subprocess
 import os
 import time
 
+# frp可执行文件根路径
+frp_path = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\actuator\\Frp\\frpc'
+
+
 # 执行器
 class actuator:
     def __init__(self) -> None:
         pass
 
-    # 查找node.js进程
+    # 查找frpc进程
     def get_frp_pids():
         try:
             output = subprocess.check_output(['pgrep', '-a', 'frpc'])
@@ -51,21 +55,40 @@ class frp_controller:
 
     # 查看状态
     def state(self):
-        print('查看状态')
-        self.sta = 'off'
-        nodejs_pids = actuator.get_frp_pids() # 获取frp.js PID
-        for pid in nodejs_pids: # 遍历所有frp.js进程，包括前后端
-            print('发现PID:', pid)
-            self.sta = 'on'
-        return self.sta
+        # print('查看状态')
+        # self.sta = 'off'
+        # nodejs_pids = actuator.get_frp_pids() # 获取frp.js PID
+        # for pid in nodejs_pids: # 遍历所有frpc进程，包括前后端
+        #     print('发现PID:', pid)
+        #     self.sta = 'on'
+        
+        # 返回数据
+        message_data = {
+            'name' : 'frp_return',
+            'request_type' : 'return_data',
+            'data' : [{
+                'switch' : 'on',
+                'config' : '# 错误',
+            }], 
+        }
+
+        # 查看状态
+        # if self.sta == 'on':
+        #     message_data['data'][0]['switch'] = 'on'
+        # elif self.sta == 'off':
+        #     message_data['data'][0]['switch'] = 'off'
+
+        # 查看配置文件
+        with open(frp_path + '\\' + 'frpc.ini', 'r', encoding='utf-8') as file:
+            content = file.read()
+        message_data['data'][0]['config'] = content
+
+        return message_data
 
     # 修改器
-    def revise(self, mtype, data):
-        if mtype == 'check': # 查看
-            pass
-            # return 
-        elif mtype == 'revise': # 修改
-            pass
+    def revise(self, data):
+        with open(frp_path + '\\frpc.ini', 'w', encoding='utf-8') as file:
+            file.write(data['data'][0]['config'])
 
 
 

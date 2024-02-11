@@ -136,7 +136,7 @@
 
     // 初始化CodeMirror编辑器
     var editor = CodeMirror(document.getElementById('editor'), {
-      value: "; 这是一个示例INI文件\n\n[Section1]\nkey1 = value1\nkey2 = value2\n\n[Section2]\nkey3 = value3",
+      value: "{{ config }}",
       mode: "text/x-custom-ini", // 使用自定义INI模式
       lineNumbers: true,
       theme: "Highlight" // 设置主题为eclipse
@@ -145,3 +145,51 @@
 </body>
 
 </html>
+
+
+<!-- python模拟POST代码 -->
+
+<!-- import requests
+import json
+
+def start_task(message_data):
+    data = message_data
+    url = 'http://127.0.0.1:1234/api'
+    try:
+        r = requests.post(url,data=json.dumps(data))
+        return r.json()
+    except:
+        return '错误'
+
+if __name__ == '__main__':
+    message_data = {
+        'name' : 'frp_sw',
+        'request_type' : 'revise',
+        'data' : [{
+            'config' : '# 测试1\n# 测试2', 
+        }],
+    }
+    print(start_task(message_data)) -->
+
+
+
+
+<!-- json数据 -->
+<!-- 
+{
+  'name' : 'frp_sw',
+  'request_type' : 'revise',
+  'data' : [{
+      'config' : '文件提交内容', 
+  }],
+} -->
+
+<!-- POST参数 -->
+<!-- 
+mame(名称，固定为'frp_sw')
+request_type(请求类型，固定为'revise')
+config(输入框的内容)
+-->
+
+
+

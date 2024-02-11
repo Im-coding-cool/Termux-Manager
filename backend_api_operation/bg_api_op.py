@@ -65,15 +65,17 @@ def get_api(request): # 后端API_GET接口
         else:
             context = ''
     else:
-        if request.POST['name'] == 'frp_write':
-            message_data = {
-                'name' : 'frp_write', # 名称
-                'request_type' : 'write',
-
-                # 任务详情 data(任务数据)
-                'data' : request.POST['data'], 
-            }
-            # 发送任务到后台
-            start_task(message_data)
+        if request.POST['name'] == 'frp_sw':
+            if request.POST['request_type'] == 'revise':
+                message_data = {
+                    'name' : 'frp_sw', # 名称
+                    'request_type' : 'revise',
+                    'data' : [{
+                        'config' : request.POST['data'], 
+                    }],
+                }
+                # 发送任务到后台
+                start_task(message_data)
+        context = '完事'
 
     return render(request, 'api.html', {'api' : context})

@@ -10,7 +10,7 @@ switch = mcsm_api.mcsm_controller() # 注册控制器
 import json
 
 # 数据交换目录
-根目录 = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\test\\data'
+根目录 = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\data'
 
 
 def 保存结果(message_data):    
