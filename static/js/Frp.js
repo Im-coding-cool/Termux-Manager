@@ -21,10 +21,3 @@ CodeMirror.defineMode("customIni", function() {
 });
 CodeMirror.defineMIME("text/x-custom-ini", "customIni");
 
-// 初始化CodeMirror编辑器
-var editor = CodeMirror(document.getElementById('editor'), {
-  value: "{{ config }}",
-  mode: "text/x-custom-ini", // 使用自定义INI模式
-  lineNumbers: true,
-  theme: "Highlight" // 设置主题为eclipse
-});

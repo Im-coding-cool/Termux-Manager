@@ -64,6 +64,16 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="../static/js/Frp.js"></script>
+  <script>
+    // 初始化CodeMirror编辑器
+    var editor = CodeMirror(document.getElementById('editor'), {
+      value: "{{ config }}",
+      mode: "text/x-custom-ini", // 使用自定义INI模式
+      lineNumbers: true,
+      theme: "Highlight" // 设置主题为eclipse
+    });
+  </script>
+  
 </body>
 
 </html>
