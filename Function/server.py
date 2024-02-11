@@ -37,11 +37,12 @@ def Frp_server(request):
     data = request_result(message_data)
     if '超时' in data:
         state = '连接超时，状态拉取失败'
+        config = '连接超时，状态拉取失败'
     else:
         if data['data'][0]['switch'] == 'off':
             state = '服务关闭'
         elif data['data'][0]['switch'] == 'on':
             state = '服务运行中'
-    config = data['data'][0]['config'].replace('\n', '\\n')
+        config = data['data'][0]['config'].replace('\n', '\\n')
 
     return render(request, 'Frp.html', {'con' : "function_menu.html", 'state' : state, 'config' : config})
