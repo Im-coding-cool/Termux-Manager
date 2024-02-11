@@ -1,5 +1,6 @@
 import subprocess
 import os
+import wprint
 
 # 执行器
 class actuator:
@@ -50,11 +51,11 @@ class mcsm_controller:
 
     # 查看状态
     def state(self):
-        print('查看状态')
+        wprint.wprint('查看状态')
         self.sta = 'off'
         nodejs_pids = actuator.get_nodejs_pids() # 获取node.js PID
         for pid in nodejs_pids: # 遍历所有node.js进程，包括前后端
-            print('发现PID:', pid)
+            wprint.wprint('发现PID: ' + pid)
             self.sta = 'on'
         return self.sta
 

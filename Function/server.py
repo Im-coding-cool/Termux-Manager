@@ -16,29 +16,13 @@ def MCSM_server(request): # MCSM管理
     }
     # 获取运行状态
     data = request_result(message_data)
-    if data == '连接错误':
-        data = '连接出错'
-    while True:
-        try:
-            if data[0]['switch'] == 'on':
-                data = '运行中'
-                break
-            elif data[0]['switch'] == 'off':
-                data = '已关闭'
-                break
-            elif data == '超时':
-                data = '状态获取失败,超时'
-                break
-            elif data == '连接出错':
-                data = '连接出错'
-                break
-        except:
-            if data == '超时':
-                data = '状态获取失败,超时'
-                break
-            elif data == '连接出错':
-                data = '连接出错'
-                break
+    if '超时' in data:
+        data = '连接超时，状态拉取失败'
+    else:
+        if data['data'][0]['switch'] == 'off':
+            data = '服务关闭'
+        elif data['data'][0]['switch'] == 'on':
+            data = '服务运行中'
             
     return render(request, 'MCSM_server.html', {'con' : "function_menu.html", 'state' : data})
 

@@ -1,53 +1,69 @@
-import subprocess
 import os
+import wprint
+import re
+import threading
+
+import mcsm_api
+switch = mcsm_api.mcsm_controller() # 注册控制器
+
+import json
+
+# 数据交换目录
+根目录 = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\test\\data'
 
 
+def 保存结果(message_data):    
+    # 以覆盖方式写入文件，如果没有该文件就创建一个
+    with open(根目录 + '\\-1-mcsm_return.json', 'w') as file:
+        file.write(json.dumps(message_data))
 
-class mcsm_s:
-    def __init__(self) -> None:
-        pass
+def 执行(data):
+    if data['request_type'] == 'task': # 请求类型 task(任务) check(查看)
+        # 执行任务
+        if data['data'][0]['switch'] == 'on':
+            wprint.wprint('-3-开启操作')
+            # 开启
+            if switch.state() != 'on':
+                switch.switch('on')
+        elif data['data'][0]['switch'] == 'off':
+            wprint.wprint('-4-关闭操作')
+            # 关闭
+            # wprint.wprint(switch.state())
+            if switch.state() != 'off':
+                switch.switch('off')
+    elif data['request_type'] == 'check':
+        wprint.wprint('-5-查看操作')
+        # 初始化参数
+        message_data = {
+            'name' : 'mcsm_return',
+            'request_type' : 'return_data',
+            'data' : [{
+                'switch' : 'off' # 开关 on开启 off关闭
+            }], 
+        }
 
-    def get_nodejs_pids():
-        try:
-            output = subprocess.check_output(['pgrep', '-a', 'node'])
-            lines = output.decode('utf-8').split('\n')
-            pids = [line.split()[0] for line in lines if 'node app.js' in line]
-            return pids
-        except subprocess.CalledProcessError:
-            return []
-
-    def kill_process(pid):
-        try:
-            subprocess.run(['kill','-9', pid])
-            print(f"已关闭进程PID {pid}")
-        except subprocess.CalledProcessError as e:
-            print(f"关闭进程PID {pid} 失败：", e)
-
-    def on(self):
-        # # 执行连续的命令
-        # commands = [
-        #     # 登录容器
-        #     'proot-distro login ubuntu',
-        #     # 执行开启命令
-        #     'cd /opt/mcsmanager/ && ./start-daemon.sh & ./start-web.sh & ls'
-        # ]
-        # # 通过管道连接多个命令
-        # process = subprocess.Popen(' && '.join(commands), shell=True)
-        # process.wait()
-        # print("已开启MCSM")
-        pass
-
-    def off(self):
-        nodejs_pids = mcsm_s.get_nodejs_pids() # 获取node.js PID
-        for pid in nodejs_pids: # 遍历所有node.js进程，包括前后端
-            mcsm_s.kill_process(pid) # 关闭对应PID
+        # 查看状态
+        if switch.state() == 'on':
+            message_data['data'][0]['switch'] = 'on'
+        elif switch.state() == 'off':
+            message_data['data'][0]['switch'] = 'off'
+        
+        # 保存结果
+        保存结果(message_data)
 
 
-    def state(self, sw):
-        if sw == "on":     
-            mcsm_s.on(self) # 开启MCSM面板
-        elif sw == "off":
-            mcsm_s.off(self) # 关闭MCSM
-        else:
-            print("传参错误")
-
+# 遍历文件
+file_list = os.listdir(根目录)
+for file in file_list:
+    # wprint.wprint(file)
+    if 'mcsm_sw' in file:
+        result = re.search(r'-(.*?)-', file)
+        if result:
+            wprint.wprint(result.group(1))
+            with open(file, 'r') as file:
+                data = json.loads(file)
+            os.remove(根目录 + '\\' + file)
+            thread1 = threading.Thread(target=执行, args=(data))
+            thread1.start()
+            
+            
