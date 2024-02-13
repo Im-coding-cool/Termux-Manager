@@ -1,0 +1,34 @@
+{
+    "我是注释" : "返回当前正在安装的任务",
+    "name" : "xxxx",
+    "request_type" : "return_value",
+    "data" : [{
+        "number_tasks" : 4,
+        "task_list" : [
+            {
+                "task_id" : 1,
+                "name" : "我的世界Java1.19.2",
+                "state" : "installing",
+                "schedule" : 30
+            },
+            {
+                "task_id" : 2,
+                "name" : "青柠便签",
+                "state" : "waiting_installation",
+                "schedule" : 20
+            },
+            {
+                "task_id" : 3,
+                "name" : "自动Frp",
+                "state" : "waiting_installation",
+                "schedule" : 10
+            },
+            {
+                "task_id" : 4,
+                "name" : "官方拓展包",
+                "state" : "waiting_installation",
+                "schedule" : 80
+            }
+        ]
+    }]
+}
