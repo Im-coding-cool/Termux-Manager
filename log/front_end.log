@@ -391,3 +391,58 @@ Not Found: /friendly_reminder/static/img/wechat-group-3.jpeg
 [17/Feb/2024 08:44:36] "GET /static/img/wechat-group-3.jpeg HTTP/1.1" 200 108625
 [17/Feb/2024 08:57:58] "GET /default_man/ HTTP/1.1" 200 9863
 [17/Feb/2024 08:57:58] "POST /default_man/ HTTP/1.1" 200 382
+Watching for file changes with StatReloader
+[17/Feb/2024 11:42:08] "GET / HTTP/1.1" 200 1790
+[17/Feb/2024 11:42:12] "GET /default_man/ HTTP/1.1" 200 9863
+[17/Feb/2024 11:42:12] "GET /static/js/MCSM_server.js HTTP/1.1" 304 0
+[17/Feb/2024 11:42:19] "GET /?name=&key=chen HTTP/1.1" 200 1855
+[17/Feb/2024 11:42:21] "GET /menu/ HTTP/1.1" 200 3127
+[17/Feb/2024 11:42:25] "GET /Frp/ HTTP/1.1" 200 10480
+[17/Feb/2024 11:42:25] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:42:26] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:42:27] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:42:29] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:42:30] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:42:31] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:42:31] "GET /friendly_reminder/ HTTP/1.1" 200 4573
+[17/Feb/2024 11:42:31] "GET /static/css/plugins.css HTTP/1.1" 200 139490
+[17/Feb/2024 11:42:31] "GET /static/img/i12.png HTTP/1.1" 200 20531
+[17/Feb/2024 11:42:31] "GET /static/css/style.css HTTP/1.1" 200 705572
+[17/Feb/2024 11:42:31] "GET /static/img/wechat-group-3.jpeg HTTP/1.1" 200 108625
+[17/Feb/2024 11:42:57] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:42:59] "GET /friendly_reminder/ HTTP/1.1" 200 4573
+[17/Feb/2024 11:42:59] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:42:59] "GET /static/css/plugins.css HTTP/1.1" 304 0
+[17/Feb/2024 11:42:59] "GET /static/css/style.css HTTP/1.1" 304 0
+[17/Feb/2024 11:42:59] "GET /static/img/wechat-group-3.jpeg HTTP/1.1" 304 0
+[17/Feb/2024 11:42:59] "GET /static/img/i12.png HTTP/1.1" 304 0
+[17/Feb/2024 11:43:01] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:02] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:03] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:04] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:05] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:06] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:07] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:08] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:09] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:10] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:11] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:12] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:13] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:14] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:15] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:16] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:17] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:20] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 11:43:21] "POST /Frp/ HTTP/1.1" 200 643
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 17, 2024 - 11:42:07
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
