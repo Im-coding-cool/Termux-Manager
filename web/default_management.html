@@ -144,7 +144,7 @@
 
     </form> -->
     <!--  -->
-    <div id="aa"></div>
+    <div id="aa" style="width: 100%;"></div>
     <script>
         var httpRequest = new XMLHttpRequest();
         var url = "/default_man/";
@@ -161,7 +161,8 @@
                     htmlContent += '<p>如果您愿意和我们一同开发,我们随时欢迎。</p>';
 
                     for (var i in result) {
-                        htmlContent = htmlContent + '<h3>id:' + result[i]['id'] + '</h3><h3>name:' + result[i]['name'] + '</h3><h3>介绍:' + result[i]['introduce'] + '</h3><button onclick=\"window.location.href=\'./?id=' + result[i]['id'] + '\'\" type=\"button\">管理</button></br>--------------------'
+                        htmlContent += '<div class="row"><div class="col-md-6"><div class="card"><div class="card-body"><h5 class="card-title">名称: ' + result[i]['name'] + '</h5><p class="card-text">id: ' + result[i]['id'] + '</p><p class="card-text">介绍: ' + result[i]['introduce'] + '</p><button onclick="window.location.href=\'./?id=' + result[i]['id'] + '\'" class="btn btn-primary">管理</button></div></div></div></div>';
+                        // htmlContent = htmlContent + '<h3>id:' + result[i]['id'] + '</h3><h3>name:' + result[i]['name'] + '</h3><h3>介绍:' + result[i]['introduce'] + '</h3><button onclick=\"window.location.href='./?id=' + result[i]['id'] + ''" type=\"button\">管理</button></br>--------------------'
                     }
 
                     var targetDiv = document.getElementById('aa');

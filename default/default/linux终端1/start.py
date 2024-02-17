@@ -5,14 +5,23 @@ import sqlite3
 import configparser
 from datetime import datetime
 import os
-from config.config import *
 
+# 加载配置文件
+import configparser
+import global_configuration
+config_path = global_configuration.ROOT_PSTH
+config_path = config_path + 'config/config.ini'
+global_config = configparser.ConfigParser()
+global_config.read(config_path) # 全局配置
+
+# 当前配置
+DEFAULT_ROOT_PATH = global_config.get('default', 'root_path')
 
 # 创建ConfigParser对象
 config = configparser.ConfigParser()
 
 # 读取INI文件
-config.read('/home/chen/termux-manager/default/default/linux2/config.ini')
+config.read(DEFAULT_ROOT_PATH + 'default/linux终端1/config.ini')
 
 # 执行命令并创建伪终端
 proc = subprocess.Popen(['bash'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
@@ -43,7 +52,7 @@ def error_monitoring():
 
 def wdatabase(id, output):
     # 链接数据库
-    dlink = sqlite3.connect('/home/chen/termux-manager/default/database/data.db')
+    dlink = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
     cur = dlink.cursor()
 
     # 执行 SELECT 查询
@@ -74,7 +83,7 @@ def record_time():
         pid = os.getpid()
         print(formatted_current_time,'> pid:',pid)
         # 链接数据库
-        dlink = sqlite3.connect('/home/chen/termux-manager/default/database/data.db')
+        dlink = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
         cur = dlink.cursor()
 
         # 执行 SELECT 查询
@@ -101,7 +110,7 @@ def run_command():
     while whether_run:
         time.sleep(0.05)
         # 链接数据库
-        dlink = sqlite3.connect('/home/chen/termux-manager/default/database/data.db')
+        dlink = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
         cur = dlink.cursor()
         # 执行 SELECT 查询
         cur.execute("SELECT * FROM items WHERE id=?", (id,))
@@ -147,22 +156,9 @@ if __name__ == "__main__":
     runcom = threading.Thread(target=run_command)
     runcom.start()
 
-    # 执行测试命令
-    # data = data + '> ls\n'
-    # proc.stdin.write("ls\n")
+    # 执行命令
+    # proc.stdin.write("python3 " + DEFAULT_ROOT_PATH + "default/linux终端1/install.py\n")
     # proc.stdin.flush()
-    # time.sleep(0.5)
-
-    # data = data + '> cd \n'
-    # proc.stdin.write("cd \n")
-    # proc.stdin.flush()
-    # time.sleep(0.1)
-
-    # data = data + '> ls \n'
-    # proc.stdin.write("ls \n")
-    # proc.stdin.flush()
-    # time.sleep(3)
-
 
 
 

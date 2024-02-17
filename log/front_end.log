@@ -391,3 +391,192 @@ Not Found: /friendly_reminder/static/img/wechat-group-3.jpeg
 [17/Feb/2024 08:44:36] "GET /static/img/wechat-group-3.jpeg HTTP/1.1" 200 108625
 [17/Feb/2024 08:57:58] "GET /default_man/ HTTP/1.1" 200 9863
 [17/Feb/2024 08:57:58] "POST /default_man/ HTTP/1.1" 200 382
+Watching for file changes with StatReloader
+[17/Feb/2024 12:00:32] "GET / HTTP/1.1" 200 1790
+[17/Feb/2024 12:00:32] "GET /static/css/Login.css HTTP/1.1" 304 0
+[17/Feb/2024 12:00:37] "GET /?name=&key=chen HTTP/1.1" 200 1855
+[17/Feb/2024 12:00:38] "GET /menu/ HTTP/1.1" 200 3127
+[17/Feb/2024 12:00:39] "GET /static/css/state.css HTTP/1.1" 304 0
+[17/Feb/2024 12:00:44] "GET /default_man/ HTTP/1.1" 200 9863
+[17/Feb/2024 12:00:45] "GET /static/js/MCSM_server.js HTTP/1.1" 304 0
+[17/Feb/2024 12:00:45] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:01:01] "GET /menu/ HTTP/1.1" 200 3127
+[17/Feb/2024 12:01:02] "GET /default_man/ HTTP/1.1" 200 9863
+[17/Feb/2024 12:01:03] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:01:26] "GET /default_man/ HTTP/1.1" 200 9863
+[17/Feb/2024 12:01:26] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:01:31] "GET /default_man/?id=2 HTTP/1.1" 200 7212
+[17/Feb/2024 12:01:31] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:01:32] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:01:33] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:01:34] "POST /default_man/ HTTP/1.1" 200 54
+[17/Feb/2024 12:01:34] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:01:35] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:01:36] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 12:01:38] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 12:01:39] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 12:01:40] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 12:01:40] "POST /default_man/ HTTP/1.1" 200 12
+[17/Feb/2024 12:01:41] "POST /default_man/ HTTP/1.1" 200 273
+[17/Feb/2024 12:01:42] "POST /default_man/ HTTP/1.1" 200 273
+[17/Feb/2024 12:01:42] "POST /default_man/ HTTP/1.1" 200 49
+[17/Feb/2024 12:01:43] "POST /default_man/ HTTP/1.1" 200 273
+[17/Feb/2024 12:01:44] "POST /default_man/ HTTP/1.1" 200 273
+[17/Feb/2024 12:01:45] "POST /default_man/ HTTP/1.1" 200 273
+[17/Feb/2024 12:01:46] "POST /default_man/ HTTP/1.1" 200 273
+[17/Feb/2024 12:01:47] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:01:48] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:01:49] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:01:49] "GET /default_man/ HTTP/1.1" 200 9863
+[17/Feb/2024 12:01:49] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:06:49] "GET /default_man/ HTTP/1.1" 200 9863
+[17/Feb/2024 12:06:49] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:07:58] "GET /default_man/ HTTP/1.1" 200 10201
+[17/Feb/2024 12:07:58] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:08:52] "GET /Frp/ HTTP/1.1" 200 10480
+[17/Feb/2024 12:08:52] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:08:54] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:08:57] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:08:58] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:00] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:03] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:04] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:07] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:08] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:10] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:13] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:14] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:17] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:18] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:20] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:23] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:24] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:26] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:27] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:29] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:32] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:33] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:35] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:37] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:39] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:42] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:43] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:45] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:47] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:48] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:49] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:50] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 12:09:50] "GET /default_man/ HTTP/1.1" 200 10851
+[17/Feb/2024 12:09:51] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:10:14] "GET /default_man/ HTTP/1.1" 200 10754
+[17/Feb/2024 12:10:15] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:20:16] "GET /default_man/ HTTP/1.1" 200 10298
+[17/Feb/2024 12:20:16] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:20:51] "GET /default_man/ HTTP/1.1" 200 10316
+[17/Feb/2024 12:20:52] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:21:07] "GET /default_man/ HTTP/1.1" 200 10298
+[17/Feb/2024 12:21:08] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:21:21] "GET /default_man/ HTTP/1.1" 200 10298
+[17/Feb/2024 12:21:21] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:21:23] "GET /default_man/?id=9981 HTTP/1.1" 200 7224
+[17/Feb/2024 12:21:23] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:21:24] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:21:26] "GET /default_man/?id=1 HTTP/1.1" 200 7212
+[17/Feb/2024 12:21:27] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:21:28] "GET /default_man/ HTTP/1.1" 200 10298
+[17/Feb/2024 12:21:28] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:21:28] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:21:29] "GET /default_man/?id=2 HTTP/1.1" 200 7212
+[17/Feb/2024 12:21:29] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:23:14] "GET /default_man/ HTTP/1.1" 200 10380
+[17/Feb/2024 12:23:15] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:23:38] "GET /default_man/ HTTP/1.1" 200 10360
+[17/Feb/2024 12:23:38] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:23:40] "GET /default_man/ HTTP/1.1" 200 10360
+[17/Feb/2024 12:23:40] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:23:50] "GET /default_man/ HTTP/1.1" 200 10356
+[17/Feb/2024 12:23:50] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:23:59] "GET /default_man/ HTTP/1.1" 200 10365
+[17/Feb/2024 12:24:00] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:24:19] "GET /default_man/ HTTP/1.1" 200 10368
+[17/Feb/2024 12:24:19] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:24:33] "GET /default_man/ HTTP/1.1" 200 10319
+[17/Feb/2024 12:24:33] "POST /default_man/ HTTP/1.1" 200 517
+[17/Feb/2024 12:24:40] "GET /default_man/?id=9981 HTTP/1.1" 200 7224
+[17/Feb/2024 12:24:41] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:24:42] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:24:43] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:24:44] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:24:45] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:24:46] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:24:48] "GET /default_man/?id=1 HTTP/1.1" 200 7212
+[17/Feb/2024 12:24:48] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:24:49] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 12:25:22] "GET /default_man/ HTTP/1.1" 200 10319
+[17/Feb/2024 12:25:23] "POST /default_man/ HTTP/1.1" 200 517
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 17, 2024 - 12:00:18
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+ser: POST
+ser: POST
+ser: POST
+65905.897784
+65906.926434
+65907.938857
+65908.873771
+65908.952802
+65909.971948
+1.991206
+1.010489
+1.032725
+1.058486
+1.074131
+1.088135
+PID: 18744
+已关闭进程PID 18744
+1.102568
+2.113795
+3.135977
+4.151135
+5.169378
+6.180863
+7.193797
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+17976.692085
+17977.728492
+68211.00901
+68212.200929
+ser: POST
+1187.537044
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+ser: POST
+18174.265205
+18175.291762
+18176.607669
+18177.619936
+18178.653859
+18179.839444
+68412.692244
+68413.723037
+ser: POST

@@ -105,3 +105,12 @@ wprint.py: 线程2
 wprint.py: frp_查看状态
 wprint.py: -5-查看操作
 查看状态
+ * Serving Flask app 'main'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:1234
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 794-621-290
+127.0.0.1 - - [17/Feb/2024 20:08:52] "POST /api HTTP/1.1" 200 -
