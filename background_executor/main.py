@@ -10,8 +10,22 @@ import actuator.Frp.Frp as frp
 
 
 
+
+
+# 加载配置文件
+import configparser
+import global_configuration
+config_path = global_configuration.ROOT_PSTH
+config_path = config_path + 'config/config.ini'
+global_config = configparser.ConfigParser()
+global_config.read(config_path) # 全局配置
+
+# 当前配置
+PATH = global_config.get('rear_end', 'path')
+
+
 # 数据交换目录
-根目录 = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\data'
+根目录 = PATH + 'data'
 
 # 临时储存返回结果
 return_res = 'f'
@@ -29,7 +43,7 @@ def timerr(te):
 # 写入任务
 def 写入任务(file, message_data):    
     # 以覆盖方式写入文件，如果没有该文件就创建一个
-    with open(根目录 + '\\' + file, 'w') as filee:
+    with open(根目录 + '/' + file, 'w') as filee:
         filee.write(json.dumps(message_data))
 
 app = Flask(__name__)
@@ -50,9 +64,9 @@ def return_results(type):
                     wprint.wprint(result.group(1))
                     while True:
                         try:
-                            with open(根目录 + '\\' + file, 'r') as f:
+                            with open(根目录 + '/' + file, 'r') as f:
                                 data = json.load(f)
-                            os.remove(根目录 + '\\-1-' + type + '.json')
+                            os.remove(根目录 + '/-1-' + type + '.json')
                             return_res = data
                             i = 1
                             break

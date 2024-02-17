@@ -6,5 +6,6 @@ from . import server
 urlpatterns = [
     path("server_menu/", server.server_menu), # 服务器功能配置菜单
     path("MCSM_server/", server.MCSM_server), # MCSM服务开关
-    path('Frp', server.Frp_server)
+    path('Frp/', server.Frp_server),
+    path('default_man/', server.default_man)
 ]

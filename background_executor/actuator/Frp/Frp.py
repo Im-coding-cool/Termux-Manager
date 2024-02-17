@@ -9,8 +9,20 @@ switch = Frp_api.frp_controller() # 注册控制器
 
 import json
 
+# 加载配置文件
+import configparser
+import global_configuration
+config_path = global_configuration.ROOT_PSTH
+config_path = config_path + 'config/config.ini'
+global_config = configparser.ConfigParser()
+global_config.read(config_path) # 全局配置
+
+# 当前配置
+PATH = global_config.get('rear_end', 'path')
+
+
 # 数据交换目录
-根目录 = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\data'
+根目录 = PATH + 'data'
 
 
 def 执行(data):

@@ -2,10 +2,9 @@ import requests
 import json
  
 data = {
-    'name' : 'mcsm_sw',
-    'request_type' : 'check',
+    'name' : 'default_man',
 }
-url = 'http://127.0.0.1:1234/api'
+url = 'http://127.0.0.1:8000/default_man/'
 
 r = requests.post(url,data=json.dumps(data))
 print(r.json())

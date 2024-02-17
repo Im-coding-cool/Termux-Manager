@@ -9,13 +9,22 @@ switch = mcsm_api.mcsm_controller() # 注册控制器
 
 import json
 
-# 数据交换目录
-根目录 = 'E:\\项目\\Termux\\Termux-Manager\\background_executor\\data'
+# 加载配置文件
+import configparser
+import global_configuration
+config_path = global_configuration.ROOT_PSTH
+config_path = config_path + 'config/config.ini'
+global_config = configparser.ConfigParser()
+global_config.read(config_path) # 全局配置
+
+# 当前配置
+PATH = global_config.get('rear_end', 'path')
+根目录 = PATH + 'data'  # 数据交换目录
 
 
 def 保存结果(message_data):    
     # 以覆盖方式写入文件，如果没有该文件就创建一个
-    with open(根目录 + '\\-1-mcsm_return.json', 'w') as file:
+    with open(根目录 + '/-1-mcsm_return.json', 'w') as file:
         file.write(json.dumps(message_data))
 
 def 执行(data):
@@ -63,9 +72,9 @@ while True:
             result = re.search(r'-(.*?)-', file)
             if result:
                 wprint.wprint(result.group(1))
-                with open(根目录 + '\\' + file, 'r') as f:
+                with open(根目录 + '/' + file, 'r') as f:
                     data = json.load(f)
-                os.remove(根目录 + '\\' + file)
+                os.remove(根目录 + '/' + file)
                 thread1 = threading.Thread(target=执行, args=(data,))
                 thread1.start()
             

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>弹窗与列表</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openPopup()">显示任务列表</button>
+
+  <!-- 弹窗 -->
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f9f9f9; padding: 20px;">
+    <h2>任务列表</h2>
+    <table id="task-table">
+      <tr>
+        <th>ID</th>
+        <th>名称</th>
+        <th>当前状态</th>
+      </tr>
+    </table>
+    <button onclick="closePopup()">关闭</button>
+  </div>
+
+  <script>
+    function openPopup() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block';
+
+      // 创建任务数据
+      const tasks = [
+        { id: 1, name: '任务1', status: '进行中' },
+        { id: 2, name: '任务2', status: '暂停' },
+        { id: 3, name: '任务3', status: '完成' },
+        { id: 4, name: '任务4', status: '进行中' },
+        { id: 5, name: '任务5', status: '等待中' },
+        { id: 6, name: '任务6', status: '进行中' }
+      ];
+
+      // 获取表格
+      const table = document.getElementById('task-table');
+
+      // 更新表格内容
+      tasks.forEach((task) => {
+        const row = table.insertRow(-1);
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
+
+        cell1.innerHTML = task.id;
+        cell2.innerHTML = task.name;
+        cell3.innerHTML = task.status;
+      });
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'none';
+      // 清空表格内容
+      const table = document.getElementById('task-table');
+      table.innerHTML = '<tr><th>ID</th><th>名称</th><th>当前状态</th></tr>';
+    }
+  </script>
+</body>
+</html>

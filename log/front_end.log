@@ -1,0 +1,393 @@
+Watching for file changes with StatReloader
+[17/Feb/2024 07:21:10] "GET / HTTP/1.1" 200 1790
+[17/Feb/2024 07:21:10] "GET /static/css/Login.css HTTP/1.1" 304 0
+[17/Feb/2024 07:21:14] "GET /?name=&key=chen HTTP/1.1" 200 1855
+[17/Feb/2024 07:21:15] "GET /menu/ HTTP/1.1" 200 3215
+[17/Feb/2024 07:21:15] "GET /static/css/state.css HTTP/1.1" 304 0
+[17/Feb/2024 07:21:28] "GET /default_man/ HTTP/1.1" 200 9835
+[17/Feb/2024 07:21:29] "POST /default_man/ HTTP/1.1" 200 382
+[17/Feb/2024 07:21:33] "GET /default_man/?id=9981 HTTP/1.1" 200 7196
+[17/Feb/2024 07:21:34] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 07:21:35] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 07:21:36] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 07:21:37] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 07:21:38] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 07:21:39] "POST /default_man/ HTTP/1.1" 200 54
+[17/Feb/2024 07:21:39] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 07:21:40] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:41] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:42] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:43] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:44] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:45] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:46] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:48] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:48] "POST /default_man/ HTTP/1.1" 200 49
+[17/Feb/2024 07:21:49] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:50] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:51] "POST /default_man/ HTTP/1.1" 200 132
+[17/Feb/2024 07:21:52] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 07:21:53] "POST /default_man/ HTTP/1.1" 200 80
+[17/Feb/2024 07:21:53] "GET /Frp/ HTTP/1.1" 200 10395
+[17/Feb/2024 07:21:53] "GET /static/css/Frp.css HTTP/1.1" 304 0
+[17/Feb/2024 07:21:53] "GET /static/js/Frp.js HTTP/1.1" 304 0
+[17/Feb/2024 07:21:54] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:21:55] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:21:56] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:21:58] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:21:59] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:00] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:01] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:02] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:03] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:04] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:04] "POST /Frp/ HTTP/1.1" 200 0
+[17/Feb/2024 07:22:05] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:06] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:08] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:09] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:10] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:11] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:14] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:15] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:18] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:19] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:20] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:21] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:22] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:23] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:24] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:25] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:26] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:28] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:29] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:30] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:31] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:32] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:33] "POST /Frp/ HTTP/1.1" 200 7132
+[17/Feb/2024 07:22:33] "POST /Frp/ HTTP/1.1" 200 0
+[17/Feb/2024 07:22:35] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:36] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:37] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:38] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:39] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:40] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:41] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:43] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:44] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:46] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:49] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:50] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:53] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:54] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:56] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:57] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:58] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:22:59] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:23:00] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:23:01] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:23:03] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:23:03] "GET /Frp/ HTTP/1.1" 200 10407
+[17/Feb/2024 07:23:04] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:23:05] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:23:06] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:23:07] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:23:07] "POST /Frp/ HTTP/1.1" 200 0
+[17/Feb/2024 07:23:08] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:09] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:10] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:11] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:12] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:13] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:14] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:16] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:19] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:20] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:21] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:22] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:23] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:24] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:25] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:26] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:28] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:29] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:30] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:31] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:32] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:33] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:34] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:35] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:23:36] "POST /Frp/ HTTP/1.1" 200 643
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 17, 2024 - 07:20:34
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+ser: POST
+12107.149968
+12108.181345
+12109.197161
+12110.250068
+12111.599825
+12112.167222
+12112.608513
+0.626218
+0.63692
+0.656614
+0.667751
+0.681524
+0.694574
+0.707449
+1.037905
+PID: 11440
+已关闭进程PID 11440
+2.052614
+3.065982
+4.0806
+5.096491
+6.444218
+Watching for file changes with StatReloader
+[17/Feb/2024 07:28:08] "GET / HTTP/1.1" 200 1790
+[17/Feb/2024 07:28:10] "GET /?name=&key=chen HTTP/1.1" 200 1855
+[17/Feb/2024 07:28:12] "GET /menu/ HTTP/1.1" 200 3215
+[17/Feb/2024 07:28:14] "GET /Frp/ HTTP/1.1" 200 10407
+[17/Feb/2024 07:28:15] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:16] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:16] "POST /Frp/ HTTP/1.1" 200 0
+[17/Feb/2024 07:28:17] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:28:18] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:28:19] "GET /Frp/ HTTP/1.1" 200 10410
+[17/Feb/2024 07:28:19] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:28:20] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:28:21] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:28:22] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:28:24] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:28:25] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:28:26] "POST /Frp/ HTTP/1.1" 200 0
+[17/Feb/2024 07:28:27] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:28] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:28] "GET /Frp/ HTTP/1.1" 200 10407
+[17/Feb/2024 07:28:28] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:30] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:31] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:32] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:35] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:28:36] "POST /Frp/ HTTP/1.1" 200 643
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 17, 2024 - 07:28:08
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[17/Feb/2024 07:30:59] "GET /Frp/ HTTP/1.1" 200 10452
+[17/Feb/2024 07:31:01] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:02] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:03] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:04] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:05] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:06] "POST /Frp/ HTTP/1.1" 200 0
+[17/Feb/2024 07:31:07] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:31:07] "GET /Frp/ HTTP/1.1" 200 10455
+[17/Feb/2024 07:31:07] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:31:09] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:31:10] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:31:11] "POST /Frp/ HTTP/1.1" 200 635
+[17/Feb/2024 07:31:12] "POST /Frp/ HTTP/1.1" 200 0
+[17/Feb/2024 07:31:13] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:13] "GET /Frp/ HTTP/1.1" 200 10452
+[17/Feb/2024 07:31:14] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:15] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:16] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:17] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:18] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:19] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:20] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:21] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:22] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:23] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:24] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:25] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:26] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:27] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:29] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:30] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:31] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:32] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:33] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:34] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:35] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:36] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:37] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:38] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:39] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:40] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:41] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:42] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:43] "GET /MCSM_server/ HTTP/1.1" 200 4674
+[17/Feb/2024 07:31:43] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 07:31:43] "GET /static/css/MCSM_server.css HTTP/1.1" 304 0
+[17/Feb/2024 07:32:00] "GET /menu/ HTTP/1.1" 200 3215
+Watching for file changes with StatReloader
+[17/Feb/2024 08:13:47] "GET /menu/ HTTP/1.1" 200 3093
+[17/Feb/2024 08:14:01] "GET /menu/ HTTP/1.1" 200 3093
+/home/chen/termux-manager/menu/menu.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 17, 2024 - 08:13:44
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[17/Feb/2024 08:14:22] "GET /menu/ HTTP/1.1" 200 3093
+/home/chen/termux-manager/menu/menu.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 17, 2024 - 08:14:20
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/menu/menu.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 17, 2024 - 08:14:35
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[17/Feb/2024 08:14:54] "GET /menu/ HTTP/1.1" 200 3099
+/home/chen/termux-manager/menu/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 17, 2024 - 08:14:52
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/home/chen/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 519, in check
+    for pattern in self.url_patterns:
+  File "/home/chen/.local/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/chen/termux-manager/Termux管理器/urls.py", line 25, in <module>
+    path("", include('menu.urls')), # 功能菜单（开始菜单）
+  File "/home/chen/.local/lib/python3.10/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/chen/termux-manager/menu/urls.py", line 11, in <module>
+    path('friendly_reminder/', menu.friendly_reminder),
+AttributeError: module 'menu.menu' has no attribute 'friendly_reminder'
+/home/chen/termux-manager/menu/menu.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+[17/Feb/2024 08:39:53] "GET /menu/ HTTP/1.1" 200 3127
+[17/Feb/2024 08:39:57] "GET /menu/ HTTP/1.1" 200 3127
+[17/Feb/2024 08:40:03] "GET /friendly_reminder/ HTTP/1.1" 200 4560
+Not Found: /friendly_reminder/static/css/plugins.css
+[17/Feb/2024 08:40:03] "GET /friendly_reminder/static/css/plugins.css HTTP/1.1" 404 3509
+Not Found: /friendly_reminder/static/css/style.css
+[17/Feb/2024 08:40:03] "GET /friendly_reminder/static/css/style.css HTTP/1.1" 404 3503
+Not Found: /friendly_reminder/static/img/i12.png
+[17/Feb/2024 08:40:03] "GET /friendly_reminder/static/img/i12.png HTTP/1.1" 404 3497
+Not Found: /friendly_reminder/static/img/wechat-group-3.jpeg
+[17/Feb/2024 08:40:03] "GET /friendly_reminder/static/img/wechat-group-3.jpeg HTTP/1.1" 404 3533
+[17/Feb/2024 08:40:11] "GET /Frp/ HTTP/1.1" 200 10480
+[17/Feb/2024 08:40:11] "POST /Frp/ HTTP/1.1" 200 643
+[17/Feb/2024 08:40:13] "GET /friendly_reminder/ HTTP/1.1" 200 4560
+Not Found: /friendly_reminder/static/css/style.css
+Not Found: /friendly_reminder/static/css/plugins.css
+[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/css/style.css HTTP/1.1" 404 3503
+[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/css/plugins.css HTTP/1.1" 404 3509
+Not Found: /friendly_reminder/static/img/i12.png
+[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/img/i12.png HTTP/1.1" 404 3497
+Not Found: /friendly_reminder/static/css/style.css
+[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/css/style.css HTTP/1.1" 404 3503
+Not Found: /friendly_reminder/static/img/wechat-group-3.jpeg
+[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/img/wechat-group-3.jpeg HTTP/1.1" 404 3533
+[17/Feb/2024 08:40:44] "GET /menu/ HTTP/1.1" 200 3127
+[17/Feb/2024 08:40:46] "GET /friendly_reminder/ HTTP/1.1" 200 4564
+[17/Feb/2024 08:40:46] "GET /static/img/i12.png HTTP/1.1" 200 20531
+[17/Feb/2024 08:40:46] "GET /static/css/plugins.css HTTP/1.1" 200 139490
+[17/Feb/2024 08:40:46] "GET /static/img/wechat-group-3.jpeg HTTP/1.1" 200 167722
+[17/Feb/2024 08:40:46] "GET /static/css/style.css HTTP/1.1" 200 705572
+[17/Feb/2024 08:41:06] "GET /menu/ HTTP/1.1" 200 3127
+[17/Feb/2024 08:41:09] "GET /friendly_reminder/ HTTP/1.1" 200 4564
+[17/Feb/2024 08:44:29] "GET /menu/ HTTP/1.1" 200 3127
+[17/Feb/2024 08:44:36] "GET /friendly_reminder/ HTTP/1.1" 200 4573
+[17/Feb/2024 08:44:36] "GET /static/css/plugins.css HTTP/1.1" 304 0
+[17/Feb/2024 08:44:36] "GET /static/css/style.css HTTP/1.1" 304 0
+[17/Feb/2024 08:44:36] "GET /static/img/i12.png HTTP/1.1" 304 0
+[17/Feb/2024 08:44:36] "GET /static/img/wechat-group-3.jpeg HTTP/1.1" 200 108625
+[17/Feb/2024 08:57:58] "GET /default_man/ HTTP/1.1" 200 9863
+[17/Feb/2024 08:57:58] "POST /default_man/ HTTP/1.1" 200 382
