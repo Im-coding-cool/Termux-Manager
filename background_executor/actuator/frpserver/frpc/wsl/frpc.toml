@@ -1,0 +1,14 @@
+# 配置文件写入测试完成
+# 配置文件读取测试完成
+
+serverAddr = "127.0.0.1"
+serverPort = 7000
+
+[[proxies]]
+name = "test-tcp"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 6000
+
+# 测试

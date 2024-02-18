@@ -7,11 +7,12 @@ from django.http import JsonResponse
 import subprocess
 import os
 import sqlite3
+from django.utils import timezone
+from datetime import datetime
+import pytz
+import threading
 
 
-
-
-from datetime import datetime, timedelta
 
 import configparser
 
@@ -26,9 +27,39 @@ global_config.read(config_path) # 全局配置
 # 当前配置
 FRP_PATH = global_config.get('frp', 'root_path')
 DEFAULT_ROOT_PATH = global_config.get('default', 'root_path')
+TERMUX = global_config.get('config', 'termusx')
+TIME_RECORDER_PATH = global_config.get('time_recorder', 'time_recorder_root_path')
+MCSERVER_ROOT_PATH = global_config.get('mcserver', 'root_path')
+FRPSERVER_ROOT_PATH = global_config.get('frpserver', 'root_path')
 
+def calculatetimedifference(tm):
+    # 运行sh脚本在django外计算时间差
+    result = subprocess.run(['sh', TIME_RECORDER_PATH + 'time_recorder.sh', '-time', tm], stdout=subprocess.PIPE)
+    # 获取结果并去掉换行和空格
+    output = result.stdout.decode('utf-8').strip()
+    output = output.replace("\n", "").replace(" ", "")
+    print('时间差: ',output)
+    return int(output)
 
+def current_time():
+    # 连接到数据库
+    conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+    cursor = conn.cursor()
 
+    # 执行 SELECT 查询
+    cursor.execute("SELECT * FROM current_time WHERE id=?", (1,))
+    row = cursor.fetchone()
+    im = None
+
+    if row:
+        print(row[2])  # 如果存在则输出该条目
+        im = row[2]
+    else:
+        print("当前时间条目未找到")  # 否则输出未找到的消息
+
+    # 关闭连接
+    conn.close()
+    return im
 
 
 def server_menu(request):
@@ -36,72 +67,244 @@ def server_menu(request):
     return render(request, 'server_menu.html')
 
 def MCSM_server(request): # MCSM管理
-    na = 'server.py里的MCSM_server'
-    message_data = {
-        'name' : 'mcsm_sw', # 名称 mcsm_sw
-        'request_type' : 'check', # 请求类型 task(任务) check(查看)
-    }
-    # 获取运行状态
-    data = request_result(message_data)
-    if '超时' in data:
-        data = '连接超时，状态拉取失败'
+    if request.method=='GET':
+        request.encoding='utf-8'
+        if 'id' in request.GET:
+            html = render(request, 'mcserver_editing.html', {'con' : "function_menu.html", 'id' : request.GET['id']})
+        else:
+            html = render(request, 'MCSM_server.html', {'con' : "function_menu.html"})
     else:
-        if data['data'][0]['switch'] == 'off':
-            data = '服务关闭'
-        elif data['data'][0]['switch'] == 'on':
-            data = '服务运行中'
-            
-    return render(request, 'MCSM_server.html', {'con' : "function_menu.html", 'state' : data})
+        if request.POST['name'] == 'editing':
+            if request.POST['type'] == 'terminal':
+                # 连接到数据库
+                conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+                cursor = conn.cursor()
+
+                # 执行 SELECT 查询
+                cursor.execute("SELECT * FROM items WHERE id=?", (request.POST['id'],))
+                row = cursor.fetchone()
+
+                if row:
+                    # print(row[6])  # 如果存在则输出该条目
+                    # 计算时间差
+                    aa = calculatetimedifference(row[4])
+
+                    if aa > 5:
+                        html = JsonResponse({'data' : '暂无输出或终端内容过期\n'})
+                    else:
+                        html = JsonResponse({'data' : row[6]})
+                else:
+                    print("条目未找到")  # 否则输出未找到的消息
+                    html = JsonResponse({'data' : 'NULL'})
+                # 关闭连接
+                conn.close()
+            elif request.POST['type'] == 'run_command':
+                # 连接到数据库
+                conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+                cursor = conn.cursor()
+
+                # 执行 SELECT 查询
+                cursor.execute("SELECT * FROM items WHERE id=?", (request.POST['id'],))
+                row = cursor.fetchone()
+
+                if row:
+                    # 如果存在就修改
+                    cursor.execute("UPDATE items SET run_command = ? WHERE id = ?", (request.POST['command'], request.POST['id']))
+                else:
+                    print("条目未找到")
+
+                # 关闭连接
+                conn.commit()
+                conn.close()
+                data = {'OK': 'OK'}
+                html = JsonResponse(data)
+            elif request.POST['type'] == 'sw':
+                if request.POST['sw'] == 'ON':
+                    # 连接到数据库
+                    conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+                    cursor = conn.cursor()
+
+                    # 执行 SELECT 查询
+                    cursor.execute("SELECT * FROM items WHERE id=?", (request.POST['id'],))
+                    row = cursor.fetchone()
+
+                    if row:
+                        # print(row[6])  # 如果存在则输出该条目
+                        # 计算时间差
+                        aa = calculatetimedifference(row[4])
+
+                        if aa > 5:
+                            print('MCSM_server:', '启动')
+                            html = JsonResponse({'sw' : '已执行开启命令\n', 'NULL' : aa})
+                            subprocess.Popen(["python3", MCSERVER_ROOT_PATH + "main/start.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        else:
+                            print('MCSM_server:', '已经在运行中')
+                            html = JsonResponse({'sw' : '已经在运行中', 'NULL' : aa})
+                    else:
+                        print('MCSM_server:', '启动2')
+                        html = JsonResponse({'sw' : '已执行开启命令2\n'})
+                        subprocess.Popen(["python3", MCSERVER_ROOT_PATH + "main/start.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    # 关闭连接
+                    conn.close()
+                elif request.POST['sw'] == 'OFF':
+                    # 连接到数据库
+                    conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+                    cursor = conn.cursor()
+
+                    # 执行 SELECT 查询
+                    cursor.execute("SELECT * FROM items WHERE id=?", (request.POST['id'],))
+                    row = cursor.fetchone()
+
+                    if row:
+                        # print(row[6])  # 如果存在则输出该条目
+                        try:
+                            print('PID:', row[1])
+                            subprocess.run(['kill','-9', str(row[1])])
+                            print(f"已关闭进程PID {row[1]}")
+                            html = JsonResponse({'sw' : f"已关闭进程PID {row[1]}"})
+                        except subprocess.CalledProcessError as e:
+                            print(f"关闭进程PID {row[1]} 失败：", e)
+                            html = JsonResponse({'sw' : f"关闭进程PID {row[1]} 失败："})
+                    else:
+                        print("条目未找到")  # 否则输出未找到的消息
+                        html = JsonResponse({'sw' : 'NULL'})
+        else:
+            data = {'NULL': 'NULL'}
+            print('ser:', 'NULL')
+            html = JsonResponse(data)
+    return html
 
 # Frp管理   
 def Frp_server(request):
     if request.method=='GET':
-        na = 'server.py里的MCSM_server'
-        message_data = {
-            'name' : 'frp_sw', # 名称 mcsm_sw
-            'request_type' : 'check', # 请求类型 task(任务) check(查看)
-        }
-        # 获取运行状态
-        data = request_result(message_data)
-        if '超时' in data:
-            state = '连接超时，状态拉取失败'
-            config = '连接超时，状态拉取失败'
+        request.encoding='utf-8'
+        if 'id' in request.GET:
+            html = render(request, 'frpserver_editing.html', {'con' : "function_menu.html", 'id' : request.GET['id']})
         else:
-            if data['data'][0]['switch'] == 'off':
-                state = '服务关闭'
-            elif data['data'][0]['switch'] == 'on':
-                state = '服务运行中'
-            config = data['data'][0]['config'].replace('\n', '\\n')
-
-        return render(request, 'Frp.html', {'con' : "function_menu.html", 'state' : state, 'config' : config})
+            html = render(request, 'Frp.html', {'con' : "function_menu.html"})
+        return html
     else:
-        if request.POST['type'] == 'revise':
-            message_data = {
-                'name' : 'frp_sw', # 名称 mcsm_sw
-                'request_type' : 'revise',
-                'data' : [{
-                    'config' : request.POST['config']
-                }]
-            }
-            # 保存参数
-            data = request_result(message_data)
-            return render(request, 'api.html', {})
-        elif request.POST['type'] == 'switch':
-            message_data = {
-                'name' : 'frp_sw', # 名称 mcsm_sw
-                'request_type' : 'task',
-                'data' : [{
-                    'switch' : request.POST['switch']
-                }]
-            }
-            # 保存参数
-            data = request_result(message_data)
-            return render(request, 'api.html', {})
-        elif request.POST['type'] == 'log':
-            with open(FRP_PATH + 'frpc/nohup.out', 'r') as file: 
-                content = file.read()
-            data = {'log' : content}
-            return JsonResponse(data)
+        if request.POST['name'] == 'editing':
+            if request.POST['type'] == 'terminal':
+                # 连接到数据库
+                conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+                cursor = conn.cursor()
+
+                # 执行 SELECT 查询
+                cursor.execute("SELECT * FROM items WHERE id=?", (request.POST['id'],))
+                row = cursor.fetchone()
+
+                if row:
+                    # print(row[6])  # 如果存在则输出该条目
+                    # 计算时间差
+                    aa = calculatetimedifference(row[4])
+
+                    if aa > 5:
+                        html = JsonResponse({'data' : '暂无输出或终端内容过期\n'})
+                    else:
+                        html = JsonResponse({'data' : row[6]})
+                else:
+                    print("条目未找到")  # 否则输出未找到的消息
+                    html = JsonResponse({'data' : 'NULL'})
+                # 关闭连接
+                conn.close()
+            elif request.POST['type'] == 'run_command':
+                # 连接到数据库
+                conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+                cursor = conn.cursor()
+
+                # 执行 SELECT 查询
+                cursor.execute("SELECT * FROM items WHERE id=?", (request.POST['id'],))
+                row = cursor.fetchone()
+
+                if row:
+                    # 如果存在就修改
+                    cursor.execute("UPDATE items SET run_command = ? WHERE id = ?", (request.POST['command'], request.POST['id']))
+                else:
+                    print("条目未找到")
+
+                # 关闭连接
+                conn.commit()
+                conn.close()
+                data = {'OK': 'OK'}
+                html = JsonResponse(data)
+            elif request.POST['type'] == 'sw':
+                if request.POST['sw'] == 'ON':
+                    # 连接到数据库
+                    conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+                    cursor = conn.cursor()
+
+                    # 执行 SELECT 查询
+                    cursor.execute("SELECT * FROM items WHERE id=?", (request.POST['id'],))
+                    row = cursor.fetchone()
+
+                    if row:
+                        # print(row[6])  # 如果存在则输出该条目
+                        # 计算时间差
+                        aa = calculatetimedifference(row[4])
+
+                        if aa > 5:
+                            print('frpserver:', '启动')
+                            html = JsonResponse({'sw' : '已执行开启命令\n', 'NULL' : aa})
+                            subprocess.Popen(["python3", FRPSERVER_ROOT_PATH + "main/start.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        else:
+                            print('frpserver:', '已经在运行中')
+                            html = JsonResponse({'sw' : '已经在运行中', 'NULL' : aa})
+                    else:
+                        print('frpserver:', '启动2')
+                        html = JsonResponse({'sw' : '已执行开启命令2\n'})
+                        subprocess.Popen(["python3", FRPSERVER_ROOT_PATH + "main/start.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    # 关闭连接
+                    conn.close()
+                elif request.POST['sw'] == 'OFF':
+                    # 连接到数据库
+                    conn = sqlite3.connect(DEFAULT_ROOT_PATH + 'database/data.db')
+                    cursor = conn.cursor()
+
+                    # 执行 SELECT 查询
+                    cursor.execute("SELECT * FROM items WHERE id=?", (request.POST['id'],))
+                    row = cursor.fetchone()
+
+                    if row:
+                        # print(row[6])  # 如果存在则输出该条目
+                        try:
+                            print('PID:', row[1])
+                            subprocess.run(['kill','-9', str(row[1])])
+                            print(f"已关闭进程PID {row[1]}")
+                            html = JsonResponse({'sw' : f"已关闭进程PID {row[1]}"})
+                        except subprocess.CalledProcessError as e:
+                            print(f"关闭进程PID {row[1]} 失败：", e)
+                            html = JsonResponse({'sw' : f"关闭进程PID {row[1]} 失败："})
+                    else:
+                        print("条目未找到")  # 否则输出未找到的消息
+                        html = JsonResponse({'sw' : 'NULL'})
+        elif request.POST['name'] == 'config':
+            if request.POST['type'] == 'r': # 读取
+                if TERMUX == 'true':
+                    with open(FRPSERVER_ROOT_PATH + 'frpc/termux/frpc.toml', 'r', encoding='utf-8') as file: 
+                        content = file.read() 
+                elif TERMUX == 'false':
+                    with open(FRPSERVER_ROOT_PATH + 'frpc/wsl/frpc.toml', 'r', encoding='utf-8') as file: 
+                        content = file.read() 
+                data = {'r': content}
+                html = JsonResponse(data)
+            elif request.POST['type'] == 'w': # 写入
+                if TERMUX == 'true':
+                    with open(FRPSERVER_ROOT_PATH + 'frpc/termux/frpc.toml', 'w', encoding='utf-8') as f:
+                        f.write(request.POST['data'])
+                elif TERMUX == 'false':
+                    with open(FRPSERVER_ROOT_PATH + 'frpc/wsl/frpc.toml', 'w', encoding='utf-8') as f:
+                        f.write(request.POST['data'])
+                data = {'OK': 'W_OK'}
+                html = JsonResponse(data)
+            else:
+                data = {'config': 'NULL'}
+                html = JsonResponse(data)
+        else:
+            data = {'NULL': 'NULL'}
+            print('ser:', 'NULL')
+            html = JsonResponse(data)
+    return html
     
 
 
@@ -159,13 +362,11 @@ def default_man(request):
 
                 if row:
                     # print(row[6])  # 如果存在则输出该条目
-                    parsed_time = datetime.strptime(row[4], '%Y-%m-%d %H:%M:%S')
+                    # 计算时间差
+                    aa = calculatetimedifference(row[4])
 
-                    current_dateTime = datetime.now()
-
-                    aa = current_dateTime - parsed_time
-                    print(aa.total_seconds())
-                    if aa.total_seconds() > 5:
+                    print(aa)
+                    if aa > 5:
                         html = JsonResponse({'data' : '暂无输出或终端内容过期\n'})
                     else:
                         html = JsonResponse({'data' : row[6]})
@@ -206,13 +407,11 @@ def default_man(request):
 
                     if row:
                         # print(row[6])  # 如果存在则输出该条目
-                        parsed_time = datetime.strptime(row[4], '%Y-%m-%d %H:%M:%S')
+                        # 计算时间差
+                        aa = calculatetimedifference(row[4])
 
-                        current_dateTime = datetime.now()
-
-                        aa = current_dateTime - parsed_time
-                        print(aa.total_seconds())
-                        if aa.total_seconds() > 5:
+                        print(aa)
+                        if aa > 5:
                             html = JsonResponse({'sw' : '已执行开启命令\n'})
                             list_dir = os.listdir(DEFAULT_ROOT_PATH + 'default/')
                             for temp in list_dir:

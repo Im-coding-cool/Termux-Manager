@@ -1,296 +1,773 @@
-Watching for file changes with StatReloader
-[17/Feb/2024 07:21:10] "GET / HTTP/1.1" 200 1790
-[17/Feb/2024 07:21:10] "GET /static/css/Login.css HTTP/1.1" 304 0
-[17/Feb/2024 07:21:14] "GET /?name=&key=chen HTTP/1.1" 200 1855
-[17/Feb/2024 07:21:15] "GET /menu/ HTTP/1.1" 200 3215
-[17/Feb/2024 07:21:15] "GET /static/css/state.css HTTP/1.1" 304 0
-[17/Feb/2024 07:21:28] "GET /default_man/ HTTP/1.1" 200 9835
-[17/Feb/2024 07:21:29] "POST /default_man/ HTTP/1.1" 200 382
-[17/Feb/2024 07:21:33] "GET /default_man/?id=9981 HTTP/1.1" 200 7196
-[17/Feb/2024 07:21:34] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 07:21:35] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 07:21:36] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 07:21:37] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 07:21:38] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 07:21:39] "POST /default_man/ HTTP/1.1" 200 54
-[17/Feb/2024 07:21:39] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 07:21:40] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:41] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:42] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:43] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:44] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:45] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:46] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:48] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:48] "POST /default_man/ HTTP/1.1" 200 49
-[17/Feb/2024 07:21:49] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:50] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:51] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 07:21:52] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 07:21:53] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 07:21:53] "GET /Frp/ HTTP/1.1" 200 10395
-[17/Feb/2024 07:21:53] "GET /static/css/Frp.css HTTP/1.1" 304 0
-[17/Feb/2024 07:21:53] "GET /static/js/Frp.js HTTP/1.1" 304 0
-[17/Feb/2024 07:21:54] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:21:55] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:21:56] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:21:58] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:21:59] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:00] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:01] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:02] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:03] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:04] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:04] "POST /Frp/ HTTP/1.1" 200 0
-[17/Feb/2024 07:22:05] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:06] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:08] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:09] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:10] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:11] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:14] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:15] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:18] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:19] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:20] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:21] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:22] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:23] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:24] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:25] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:26] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:28] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:29] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:30] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:31] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:32] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:33] "POST /Frp/ HTTP/1.1" 200 7132
-[17/Feb/2024 07:22:33] "POST /Frp/ HTTP/1.1" 200 0
-[17/Feb/2024 07:22:35] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:36] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:37] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:38] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:39] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:40] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:41] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:43] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:44] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:46] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:49] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:50] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:53] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:54] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:56] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:57] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:58] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:22:59] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:23:00] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:23:01] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:23:03] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:23:03] "GET /Frp/ HTTP/1.1" 200 10407
-[17/Feb/2024 07:23:04] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:23:05] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:23:06] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:23:07] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:23:07] "POST /Frp/ HTTP/1.1" 200 0
-[17/Feb/2024 07:23:08] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:09] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:10] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:11] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:12] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:13] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:14] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:16] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:19] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:20] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:21] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:22] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:23] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:24] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:25] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:26] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:28] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:29] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:30] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:31] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:32] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:33] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:34] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:35] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:23:36] "POST /Frp/ HTTP/1.1" 200 643
+[18/Feb/2024 07:57:27] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 07:57:28] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 07:57:29] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 07:57:30] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 07:57:31] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 07:57:32] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 07:57:33] "POST /MCSM_server/ HTTP/1.1" 200 46
+[18/Feb/2024 07:57:40] "POST /MCSM_server/ HTTP/1.1" 200 46
+[18/Feb/2024 07:57:44] "POST /MCSM_server/ HTTP/1.1" 200 46
+[18/Feb/2024 07:57:49] "POST /MCSM_server/ HTTP/1.1" 200 46
+/home/chen/termux-manager/Function/server.py changed, reloading.
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-February 17, 2024 - 07:20:34
+February 18, 2024 - 07:50:10
 Django version 5.0.2, using settings 'Termux管理器.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
-ser: POST
-12107.149968
-12108.181345
-12109.197161
-12110.250068
-12111.599825
-12112.167222
-12112.608513
-0.626218
-0.63692
-0.656614
-0.667751
-0.681524
-0.694574
-0.707449
-1.037905
-PID: 11440
-已关闭进程PID 11440
-2.052614
-3.065982
-4.0806
-5.096491
-6.444218
+-8782.279874
+-8780.301172
+-8778.296451
+-8777.279745
+-8776.200138
+-8775.179299
+-8774.158055
+-8773.140516
+-8772.083815
+-8771.058181
+-8770.033151
+-8769.013032
+-8767.979847
+-8766.896552
+-8765.876238
+-8764.829432
+-8763.816825
+-8762.733865
+-8761.70682
+-8760.693401
+-8759.670908
+-8758.655084
+-8757.573727
+-8756.533216
+-8755.506931
+-8754.486498
+-8753.469742
+-8752.403903
+-8751.370475
+-8750.344501
+-8749.328913
+-8748.310482
+-8747.253829
+-8746.227941
+-8745.200411
+-8744.168882
+-8742.623803
+-8741.541057
+-8740.519169
+MCSM_server时间差: -8740.142901
+MCSM_server: 已经在运行中
+-8739.503264
+-8738.412297
+-8737.385802
+-8736.325725
+-8735.31206
+-8734.297382
+-8733.282015
+-8732.223801
+-8731.176934
+-8730.154615
+-8729.128364
+MCSM_server时间差: -8728.865719
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8728.663981
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8728.558604
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8728.390658
+MCSM_server: 已经在运行中
+-8728.074029
+-8727.055332
+-8725.293208
+-8723.292081
+-8721.288144
+-8719.535838
+-8718.496197
+MCSM_server时间差: -8718.458405
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8718.224
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8718.078789
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8717.898106
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8717.673743
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8717.556716
+MCSM_server: 已经在运行中
+-8717.474592
+MCSM_server时间差: -8717.333927
+MCSM_server: 已经在运行中
+-8716.23069
+-8714.296571
+-8712.298064
+-8711.060737
+MCSM_server时间差: -8710.330601
+MCSM_server: 已经在运行中
+-8710.031402
+MCSM_server时间差: -8710.016048
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8709.813904
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8709.728404
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8709.587701
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8709.393793
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8709.096085
+MCSM_server: 已经在运行中
+-8709.011052
+MCSM_server时间差: -8708.9137
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8708.842523
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8708.690245
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8708.484132
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8708.388102
+MCSM_server: 已经在运行中
+-8707.990928
+-8706.934039
+-8705.293379
+-8703.295951
+-8701.293964
+-8699.298775
+-8697.144281
+MCSM_server时间差: -8696.358882
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8696.185095
+MCSM_server: 已经在运行中
+-8696.112198
+MCSM_server时间差: -8696.036207
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8695.80401
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8695.70435
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8695.553911
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8695.323907
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8695.216387
+MCSM_server: 已经在运行中
+-8695.082962
+MCSM_server时间差: -8694.98396
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8694.840435
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8694.688763
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8694.484131
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8694.35163
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8694.208229
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8694.040973
+MCSM_server: 已经在运行中
+-8694.014107
+MCSM_server时间差: -8693.904469
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8693.734169
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8693.48404
+MCSM_server: 已经在运行中
+-8692.991772
+-8691.303443
+-8689.307781
+-8687.303394
+-8685.303931
+-8683.312934
+-8681.300861
+-8679.308455
+-8677.304849
+-8675.249739
+-8673.303003
+-8671.296109
+-8669.309538
+-8667.308393
+-8665.284621
+-8663.308404
+-8661.304759
+-8659.309804
+-8657.308726
+-8655.295872
+-8653.300906
+-8651.296597
+-8649.305507
+-8647.304847
+-8645.306989
+-8643.308368
+-8641.283113
+-8640.239684
+-8638.298922
+-8636.272819
+-8634.302633
+-8632.31174
+-8630.385554
+-8629.343161
+-8628.319757
+-8626.722192
+-8625.587594
+-8624.560832
+-8623.543351
+-8622.483814
+-8621.456145
+-8620.301705
+-8618.306705
+-8616.278556
+-8614.868394
+-8613.82593
+-8612.763842
+-8611.740999
+-8610.298923
+-8608.263825
+-8606.294292
+-8604.298557
+-8602.311436
+-8600.307744
+-8598.302793
+-8596.303634
+-8594.156012
+-8593.08207
+-8592.062639
+-8591.014515
+-8590.242245
+-8589.199024
+-8588.182685
+-8587.123892
+-8586.065885
+-8585.045335
+-8584.02739
+-8582.998591
+-8581.934008
+-8580.303297
+-8578.305444
+-8577.260668
+-8576.210182
+-8575.185521
+-8574.166073
+-8573.129583
+-8572.05382
+-8571.033826
+-8569.29931
+-8567.297304
+-8565.298616
+-8564.267918
+-8563.19284
+-8562.418361
+-8561.304595
+-8560.27624
+-8559.259199
+-8558.24554
+-8557.184082
+-8556.165085
+-8555.135423
+-8554.108145
+-8553.094815
+-8552.033893
+-8551.017164
+-8549.987089
+-8548.92377
+-8547.90828
+-8546.891915
+-8545.873202
+-8544.855052
+-8543.725955
+MCSM_server时间差: -8543.261747
+MCSM_server: 已经在运行中
+-8346.627813
+-8345.555087
+-8344.535073
+-8343.517485
+-8342.488135
+-8341.423788
+MCSM_server时间差: -8340.755217
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8333.038848
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8329.353546
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8324.68758
+MCSM_server: 已经在运行中
 Watching for file changes with StatReloader
-[17/Feb/2024 07:28:08] "GET / HTTP/1.1" 200 1790
-[17/Feb/2024 07:28:10] "GET /?name=&key=chen HTTP/1.1" 200 1855
-[17/Feb/2024 07:28:12] "GET /menu/ HTTP/1.1" 200 3215
-[17/Feb/2024 07:28:14] "GET /Frp/ HTTP/1.1" 200 10407
-[17/Feb/2024 07:28:15] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:16] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:16] "POST /Frp/ HTTP/1.1" 200 0
-[17/Feb/2024 07:28:17] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:28:18] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:28:19] "GET /Frp/ HTTP/1.1" 200 10410
-[17/Feb/2024 07:28:19] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:28:20] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:28:21] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:28:22] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:28:24] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:28:25] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:28:26] "POST /Frp/ HTTP/1.1" 200 0
-[17/Feb/2024 07:28:27] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:28] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:28] "GET /Frp/ HTTP/1.1" 200 10407
-[17/Feb/2024 07:28:28] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:30] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:31] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:32] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:35] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:28:36] "POST /Frp/ HTTP/1.1" 200 643
+[18/Feb/2024 08:00:40] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:00:57] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:00:58] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:00:58] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:00:59] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:00:59] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:00] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:00] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:01] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:01] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:02] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:02] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:03] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:03] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:03] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:04] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:01:04] "POST /MCSM_server/ HTTP/1.1" 200 68
+/home/chen/termux-manager/Function/server.py changed, reloading.
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-February 17, 2024 - 07:28:08
+February 18, 2024 - 08:00:38
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server时间差: -8153.136819
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8136.504621
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8135.715058
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8135.309002
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8134.906687
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8134.188769
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8133.563327
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8133.045772
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8132.504375
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8132.024054
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8131.669323
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8131.273451
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8130.878828
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8130.505411
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8130.101354
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8129.717668
+MCSM_server: 已经在运行中
+MCSM_server时间差: -8129.323926
+MCSM_server: 已经在运行中
+Watching for file changes with StatReloader
+[18/Feb/2024 08:09:08] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:10] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:11] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:12] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:13] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:14] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:14] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:09:15] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:15] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:16] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:16] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:17] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:17] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:09:18] "POST /MCSM_server/ HTTP/1.1" 200 68
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:07:42
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server时间差: -7645.922972
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7643.208971
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7642.178191
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7641.347566
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7640.623255
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7639.951711
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7639.28879
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7638.812556
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7638.245364
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7637.723737
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7637.230193
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7636.738161
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7636.173598
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7635.726621
+MCSM_server: 已经在运行中
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:10:04
 Django version 5.0.2, using settings 'Termux管理器.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
 Watching for file changes with StatReloader
-[17/Feb/2024 07:30:59] "GET /Frp/ HTTP/1.1" 200 10452
-[17/Feb/2024 07:31:01] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:02] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:03] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:04] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:05] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:06] "POST /Frp/ HTTP/1.1" 200 0
-[17/Feb/2024 07:31:07] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:31:07] "GET /Frp/ HTTP/1.1" 200 10455
-[17/Feb/2024 07:31:07] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:31:09] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:31:10] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:31:11] "POST /Frp/ HTTP/1.1" 200 635
-[17/Feb/2024 07:31:12] "POST /Frp/ HTTP/1.1" 200 0
-[17/Feb/2024 07:31:13] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:13] "GET /Frp/ HTTP/1.1" 200 10452
-[17/Feb/2024 07:31:14] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:15] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:16] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:17] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:18] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:19] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:20] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:21] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:22] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:23] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:24] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:25] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:26] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:27] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:29] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:30] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:31] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:32] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:33] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:34] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:35] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:36] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:37] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:38] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:39] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:40] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:41] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:42] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:43] "GET /MCSM_server/ HTTP/1.1" 200 4674
-[17/Feb/2024 07:31:43] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 07:31:43] "GET /static/css/MCSM_server.css HTTP/1.1" 304 0
-[17/Feb/2024 07:32:00] "GET /menu/ HTTP/1.1" 200 3215
-Watching for file changes with StatReloader
-[17/Feb/2024 08:13:47] "GET /menu/ HTTP/1.1" 200 3093
-[17/Feb/2024 08:14:01] "GET /menu/ HTTP/1.1" 200 3093
-/home/chen/termux-manager/menu/menu.py changed, reloading.
+[18/Feb/2024 08:10:11] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:10:13] "POST /MCSM_server/ HTTP/1.1" 200 68
+/home/chen/termux-manager/Function/server.py changed, reloading.
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-February 17, 2024 - 08:13:44
+February 18, 2024 - 08:10:09
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server时间差: -7582.959911
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7580.740259
+MCSM_server: 已经在运行中
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:10:26
 Django version 5.0.2, using settings 'Termux管理器.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
 Watching for file changes with StatReloader
-[17/Feb/2024 08:14:22] "GET /menu/ HTTP/1.1" 200 3093
-/home/chen/termux-manager/menu/menu.py changed, reloading.
+/home/chen/termux-manager/Function/server.py changed, reloading.
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-February 17, 2024 - 08:14:20
+February 18, 2024 - 08:10:33
 Django version 5.0.2, using settings 'Termux管理器.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
 Watching for file changes with StatReloader
-/home/chen/termux-manager/menu/menu.py changed, reloading.
+[18/Feb/2024 08:11:00] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:03] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:03] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:04] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:05] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:05] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:06] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:06] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:07] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:07] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:08] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:08] "POST /MCSM_server/ HTTP/1.1" 200 66
+[18/Feb/2024 08:11:09] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:09] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:10] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:10] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:10] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:11] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:11:11] "POST /MCSM_server/ HTTP/1.1" 200 67
+/home/chen/termux-manager/Function/server.py changed, reloading.
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-February 17, 2024 - 08:14:35
+February 18, 2024 - 08:10:59
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server时间差: -7533.858046
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7530.775205
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7530.048399
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7529.438345
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7528.894763
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7528.315374
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7527.704125
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7527.154057
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7526.698028
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7526.179614
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7525.613912
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7525.23203
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7524.723089
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7524.388792
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7523.861181
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7523.472182
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7523.074042
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7522.716513
+MCSM_server: 已经在运行中
+MCSM_server时间差: -7522.357472
+MCSM_server: 已经在运行中
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:11:36
 Django version 5.0.2, using settings 'Termux管理器.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
 Watching for file changes with StatReloader
-[17/Feb/2024 08:14:54] "GET /menu/ HTTP/1.1" 200 3099
-/home/chen/termux-manager/menu/urls.py changed, reloading.
+/home/chen/termux-manager/Function/server.py changed, reloading.
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-February 17, 2024 - 08:14:52
+February 18, 2024 - 08:19:11
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:19:28
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:19:46
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:20:16
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:20:20
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:20:38
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:20:53
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[18/Feb/2024 08:21:34] "GET /MCSM_server/ HTTP/1.1" 200 4702
+Not Found: /MCSM_server/id=1000000000
+[18/Feb/2024 08:21:59] "GET /MCSM_server/id=1000000000 HTTP/1.1" 404 3464
+[18/Feb/2024 08:22:06] "GET /MCSM_server/?id=1000000000 HTTP/1.1" 200 7539
+[18/Feb/2024 08:22:07] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:08] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:09] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:10] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:11] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:12] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:13] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:15] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:17] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:19] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:21] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:22] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:23] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:24] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:25] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:26] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:27] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:28] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:29] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:30] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:22:31] "POST /MCSM_server/ HTTP/1.1" 200 68
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:20:59
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server时间差: -6842.712257
+MCSM_server: 已经在运行中
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:23:59
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:24:04
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[18/Feb/2024 08:24:14] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:24:16] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:24:16] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:24:17] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:24:17] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:24:18] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:24:18] "POST /MCSM_server/ HTTP/1.1" 200 67
+[18/Feb/2024 08:24:19] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:24:19] "POST /MCSM_server/ HTTP/1.1" 200 68
+[18/Feb/2024 08:24:20] "POST /MCSM_server/ HTTP/1.1" 200 68
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:24:07
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+MCSM_server: 已经在运行中
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:28:15
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:29:20
 Django version 5.0.2, using settings 'Termux管理器.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
@@ -332,8 +809,8 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "/home/chen/termux-manager/Termux管理器/urls.py", line 25, in <module>
-    path("", include('menu.urls')), # 功能菜单（开始菜单）
+  File "/home/chen/termux-manager/Termux管理器/urls.py", line 26, in <module>
+    path("", include('Function.urls')), # 功能
   File "/home/chen/.local/lib/python3.10/site-packages/django/urls/conf.py", line 39, in include
     urlconf_module = import_module(urlconf_module)
   File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
@@ -344,259 +821,1100 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "/home/chen/termux-manager/menu/urls.py", line 11, in <module>
-    path('friendly_reminder/', menu.friendly_reminder),
-AttributeError: module 'menu.menu' has no attribute 'friendly_reminder'
-/home/chen/termux-manager/menu/menu.py changed, reloading.
+  File "/home/chen/termux-manager/Function/urls.py", line 4, in <module>
+    from . import server
+  File "/home/chen/termux-manager/Function/server.py", line 132
+    html = JsonResponse({'sw' : '已执行开启命令\n', , 'NULL' : time_difference_in_seconds}})
+                                                                                   ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+/home/chen/termux-manager/Function/server.py changed, reloading.
 Performing system checks...
 
 Watching for file changes with StatReloader
-[17/Feb/2024 08:39:53] "GET /menu/ HTTP/1.1" 200 3127
-[17/Feb/2024 08:39:57] "GET /menu/ HTTP/1.1" 200 3127
-[17/Feb/2024 08:40:03] "GET /friendly_reminder/ HTTP/1.1" 200 4560
-Not Found: /friendly_reminder/static/css/plugins.css
-[17/Feb/2024 08:40:03] "GET /friendly_reminder/static/css/plugins.css HTTP/1.1" 404 3509
-Not Found: /friendly_reminder/static/css/style.css
-[17/Feb/2024 08:40:03] "GET /friendly_reminder/static/css/style.css HTTP/1.1" 404 3503
-Not Found: /friendly_reminder/static/img/i12.png
-[17/Feb/2024 08:40:03] "GET /friendly_reminder/static/img/i12.png HTTP/1.1" 404 3497
-Not Found: /friendly_reminder/static/img/wechat-group-3.jpeg
-[17/Feb/2024 08:40:03] "GET /friendly_reminder/static/img/wechat-group-3.jpeg HTTP/1.1" 404 3533
-[17/Feb/2024 08:40:11] "GET /Frp/ HTTP/1.1" 200 10480
-[17/Feb/2024 08:40:11] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 08:40:13] "GET /friendly_reminder/ HTTP/1.1" 200 4560
-Not Found: /friendly_reminder/static/css/style.css
-Not Found: /friendly_reminder/static/css/plugins.css
-[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/css/style.css HTTP/1.1" 404 3503
-[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/css/plugins.css HTTP/1.1" 404 3509
-Not Found: /friendly_reminder/static/img/i12.png
-[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/img/i12.png HTTP/1.1" 404 3497
-Not Found: /friendly_reminder/static/css/style.css
-[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/css/style.css HTTP/1.1" 404 3503
-Not Found: /friendly_reminder/static/img/wechat-group-3.jpeg
-[17/Feb/2024 08:40:13] "GET /friendly_reminder/static/img/wechat-group-3.jpeg HTTP/1.1" 404 3533
-[17/Feb/2024 08:40:44] "GET /menu/ HTTP/1.1" 200 3127
-[17/Feb/2024 08:40:46] "GET /friendly_reminder/ HTTP/1.1" 200 4564
-[17/Feb/2024 08:40:46] "GET /static/img/i12.png HTTP/1.1" 200 20531
-[17/Feb/2024 08:40:46] "GET /static/css/plugins.css HTTP/1.1" 200 139490
-[17/Feb/2024 08:40:46] "GET /static/img/wechat-group-3.jpeg HTTP/1.1" 200 167722
-[17/Feb/2024 08:40:46] "GET /static/css/style.css HTTP/1.1" 200 705572
-[17/Feb/2024 08:41:06] "GET /menu/ HTTP/1.1" 200 3127
-[17/Feb/2024 08:41:09] "GET /friendly_reminder/ HTTP/1.1" 200 4564
-[17/Feb/2024 08:44:29] "GET /menu/ HTTP/1.1" 200 3127
-[17/Feb/2024 08:44:36] "GET /friendly_reminder/ HTTP/1.1" 200 4573
-[17/Feb/2024 08:44:36] "GET /static/css/plugins.css HTTP/1.1" 304 0
-[17/Feb/2024 08:44:36] "GET /static/css/style.css HTTP/1.1" 304 0
-[17/Feb/2024 08:44:36] "GET /static/img/i12.png HTTP/1.1" 304 0
-[17/Feb/2024 08:44:36] "GET /static/img/wechat-group-3.jpeg HTTP/1.1" 200 108625
-[17/Feb/2024 08:57:58] "GET /default_man/ HTTP/1.1" 200 9863
-[17/Feb/2024 08:57:58] "POST /default_man/ HTTP/1.1" 200 382
-Watching for file changes with StatReloader
-[17/Feb/2024 12:00:32] "GET / HTTP/1.1" 200 1790
-[17/Feb/2024 12:00:32] "GET /static/css/Login.css HTTP/1.1" 304 0
-[17/Feb/2024 12:00:37] "GET /?name=&key=chen HTTP/1.1" 200 1855
-[17/Feb/2024 12:00:38] "GET /menu/ HTTP/1.1" 200 3127
-[17/Feb/2024 12:00:39] "GET /static/css/state.css HTTP/1.1" 304 0
-[17/Feb/2024 12:00:44] "GET /default_man/ HTTP/1.1" 200 9863
-[17/Feb/2024 12:00:45] "GET /static/js/MCSM_server.js HTTP/1.1" 304 0
-[17/Feb/2024 12:00:45] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:01:01] "GET /menu/ HTTP/1.1" 200 3127
-[17/Feb/2024 12:01:02] "GET /default_man/ HTTP/1.1" 200 9863
-[17/Feb/2024 12:01:03] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:01:26] "GET /default_man/ HTTP/1.1" 200 9863
-[17/Feb/2024 12:01:26] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:01:31] "GET /default_man/?id=2 HTTP/1.1" 200 7212
-[17/Feb/2024 12:01:31] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:01:32] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:01:33] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:01:34] "POST /default_man/ HTTP/1.1" 200 54
-[17/Feb/2024 12:01:34] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:01:35] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:01:36] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 12:01:38] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 12:01:39] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 12:01:40] "POST /default_man/ HTTP/1.1" 200 132
-[17/Feb/2024 12:01:40] "POST /default_man/ HTTP/1.1" 200 12
-[17/Feb/2024 12:01:41] "POST /default_man/ HTTP/1.1" 200 273
-[17/Feb/2024 12:01:42] "POST /default_man/ HTTP/1.1" 200 273
-[17/Feb/2024 12:01:42] "POST /default_man/ HTTP/1.1" 200 49
-[17/Feb/2024 12:01:43] "POST /default_man/ HTTP/1.1" 200 273
-[17/Feb/2024 12:01:44] "POST /default_man/ HTTP/1.1" 200 273
-[17/Feb/2024 12:01:45] "POST /default_man/ HTTP/1.1" 200 273
-[17/Feb/2024 12:01:46] "POST /default_man/ HTTP/1.1" 200 273
-[17/Feb/2024 12:01:47] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:01:48] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:01:49] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:01:49] "GET /default_man/ HTTP/1.1" 200 9863
-[17/Feb/2024 12:01:49] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:06:49] "GET /default_man/ HTTP/1.1" 200 9863
-[17/Feb/2024 12:06:49] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:07:58] "GET /default_man/ HTTP/1.1" 200 10201
-[17/Feb/2024 12:07:58] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:08:52] "GET /Frp/ HTTP/1.1" 200 10480
-[17/Feb/2024 12:08:52] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:08:54] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:08:57] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:08:58] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:00] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:03] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:04] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:07] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:08] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:10] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:13] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:14] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:17] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:18] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:20] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:23] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:24] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:26] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:27] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:29] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:32] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:33] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:35] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:37] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:39] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:42] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:43] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:45] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:47] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:48] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:49] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:50] "POST /Frp/ HTTP/1.1" 200 643
-[17/Feb/2024 12:09:50] "GET /default_man/ HTTP/1.1" 200 10851
-[17/Feb/2024 12:09:51] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:10:14] "GET /default_man/ HTTP/1.1" 200 10754
-[17/Feb/2024 12:10:15] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:20:16] "GET /default_man/ HTTP/1.1" 200 10298
-[17/Feb/2024 12:20:16] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:20:51] "GET /default_man/ HTTP/1.1" 200 10316
-[17/Feb/2024 12:20:52] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:21:07] "GET /default_man/ HTTP/1.1" 200 10298
-[17/Feb/2024 12:21:08] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:21:21] "GET /default_man/ HTTP/1.1" 200 10298
-[17/Feb/2024 12:21:21] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:21:23] "GET /default_man/?id=9981 HTTP/1.1" 200 7224
-[17/Feb/2024 12:21:23] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:21:24] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:21:26] "GET /default_man/?id=1 HTTP/1.1" 200 7212
-[17/Feb/2024 12:21:27] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:21:28] "GET /default_man/ HTTP/1.1" 200 10298
-[17/Feb/2024 12:21:28] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:21:28] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:21:29] "GET /default_man/?id=2 HTTP/1.1" 200 7212
-[17/Feb/2024 12:21:29] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:23:14] "GET /default_man/ HTTP/1.1" 200 10380
-[17/Feb/2024 12:23:15] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:23:38] "GET /default_man/ HTTP/1.1" 200 10360
-[17/Feb/2024 12:23:38] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:23:40] "GET /default_man/ HTTP/1.1" 200 10360
-[17/Feb/2024 12:23:40] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:23:50] "GET /default_man/ HTTP/1.1" 200 10356
-[17/Feb/2024 12:23:50] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:23:59] "GET /default_man/ HTTP/1.1" 200 10365
-[17/Feb/2024 12:24:00] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:24:19] "GET /default_man/ HTTP/1.1" 200 10368
-[17/Feb/2024 12:24:19] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:24:33] "GET /default_man/ HTTP/1.1" 200 10319
-[17/Feb/2024 12:24:33] "POST /default_man/ HTTP/1.1" 200 517
-[17/Feb/2024 12:24:40] "GET /default_man/?id=9981 HTTP/1.1" 200 7224
-[17/Feb/2024 12:24:41] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:24:42] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:24:43] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:24:44] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:24:45] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:24:46] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:24:48] "GET /default_man/?id=1 HTTP/1.1" 200 7212
-[17/Feb/2024 12:24:48] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:24:49] "POST /default_man/ HTTP/1.1" 200 80
-[17/Feb/2024 12:25:22] "GET /default_man/ HTTP/1.1" 200 10319
-[17/Feb/2024 12:25:23] "POST /default_man/ HTTP/1.1" 200 517
+/home/chen/termux-manager/Function/server.py changed, reloading.
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-February 17, 2024 - 12:00:18
+February 18, 2024 - 08:29:39
 Django version 5.0.2, using settings 'Termux管理器.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
-ser: POST
-ser: POST
-ser: POST
-65905.897784
-65906.926434
-65907.938857
-65908.873771
-65908.952802
-65909.971948
-1.991206
-1.010489
-1.032725
-1.058486
-1.074131
-1.088135
-PID: 18744
-已关闭进程PID 18744
-1.102568
-2.113795
-3.135977
-4.151135
-5.169378
-6.180863
-7.193797
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-17976.692085
-17977.728492
-68211.00901
-68212.200929
-ser: POST
-1187.537044
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-ser: POST
-18174.265205
-18175.291762
-18176.607669
-18177.619936
-18178.653859
-18179.839444
-68412.692244
-68413.723037
-ser: POST
 Watching for file changes with StatReloader
-Error: That port is already in use.
+[18/Feb/2024 08:30:29] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:30:50] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:06] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:07] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:08] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:08] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:09] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:09] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:31] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:34] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:31:36] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:32:02] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:02] "GET /MCSM_server/ HTTP/1.1" 200 4702
+[18/Feb/2024 08:32:03] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:04] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:04] "GET /MCSM_server/?id=1000000000 HTTP/1.1" 200 7539
+[18/Feb/2024 08:32:05] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:07] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:08] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:09] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:10] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:11] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:12] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:13] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:14] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:15] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:16] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:17] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:18] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:19] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:20] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:21] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:22] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:23] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:24] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:25] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:27] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:28] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:29] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:30] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:31] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:32] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:33] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:34] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:32:35] "POST /MCSM_server/ HTTP/1.1" 200 56
+[18/Feb/2024 08:32:36] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:37] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:38] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:39] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:40] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:41] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:42] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:43] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:44] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:46] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:47] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:48] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:49] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:50] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:51] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:52] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:53] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:54] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:55] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:56] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:58] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:32:59] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:00] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:01] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:02] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:03] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:04] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:05] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:06] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:07] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:08] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:09] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:10] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:11] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:12] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:13] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:14] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:15] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:16] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:17] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:18] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:19] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:21] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:22] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:23] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:24] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:25] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:26] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:26] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:27] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:28] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:29] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:30] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:31] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:32] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:33] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:34] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:36] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:37] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:38] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:39] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:40] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:41] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:42] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:43] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:44] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:45] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:46] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:47] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:48] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:49] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:50] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:51] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:52] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:52] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:52] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:52] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:53] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (12970): No such process
+[18/Feb/2024 08:33:53] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:53] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:53] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:53] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:53] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:54] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (12931): No such process
+[18/Feb/2024 08:33:54] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (12931): No such process
+[18/Feb/2024 08:33:54] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (12931): No such process
+[18/Feb/2024 08:33:54] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:54] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:54] "POST /MCSM_server/ HTTP/1.1" 200 19
+kill: (13058): No such process
+[18/Feb/2024 08:33:54] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13058): No such process
+[18/Feb/2024 08:33:55] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13058): No such process
+[18/Feb/2024 08:33:55] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13058): No such process
+[18/Feb/2024 08:33:55] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13058): No such process
+[18/Feb/2024 08:33:55] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:55] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:55] "POST /MCSM_server/ HTTP/1.1" 200 19
+kill: (13048): No such process
+[18/Feb/2024 08:33:55] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:56] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:56] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:56] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:56] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:56] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:56] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:33:56] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:57] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:57] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:57] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:57] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:57] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:58] "POST /MCSM_server/ HTTP/1.1" 200 19
+kill: (13048): No such process
+[18/Feb/2024 08:33:58] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:58] "POST /MCSM_server/ HTTP/1.1" 200 49
+kill: (13048): No such process
+[18/Feb/2024 08:33:58] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:33:59] "POST /MCSM_server/ HTTP/1.1" 200 19
+[18/Feb/2024 08:34:00] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:01] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:02] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:03] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:04] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:05] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:06] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:07] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:08] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:09] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:10] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:11] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:12] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:13] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:14] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:15] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:16] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:17] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:18] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:20] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:21] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:23] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:25] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:27] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:29] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:32] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:33] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:35] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:37] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:39] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:34:41] "POST /MCSM_server/ HTTP/1.1" 200 80
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:30:26
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+MCSM_server: 启动
+PID: 12994
+已关闭进程PID 12994
+PID: 13069
+已关闭进程PID 13069
+PID: 13001
+已关闭进程PID 13001
+PID: 12977
+已关闭进程PID 12977
+PID: 12970
+已关闭进程PID 12970
+PID: 12970
+已关闭进程PID 12970
+PID: 12984
+已关闭进程PID 12984
+PID: 12893
+已关闭进程PID 12893
+PID: 12963
+已关闭进程PID 12963
+PID: 12931
+已关闭进程PID 12931
+PID: 12931
+已关闭进程PID 12931
+PID: 12931
+已关闭进程PID 12931
+PID: 12931
+已关闭进程PID 12931
+PID: 13058
+已关闭进程PID 13058
+PID: 13058
+已关闭进程PID 13058
+PID: 13058
+已关闭进程PID 13058
+PID: 13058
+已关闭进程PID 13058
+PID: 13058
+已关闭进程PID 13058
+PID: 13058
+已关闭进程PID 13058
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
+PID: 13048
+已关闭进程PID 13048
 Watching for file changes with StatReloader
-Error: That port is already in use.
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:34:44
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
 Watching for file changes with StatReloader
-Error: That port is already in use.
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/home/chen/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 519, in check
+    for pattern in self.url_patterns:
+  File "/home/chen/.local/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/chen/termux-manager/Termux管理器/urls.py", line 26, in <module>
+    path("", include('Function.urls')), # 功能
+  File "/home/chen/.local/lib/python3.10/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/chen/termux-manager/Function/urls.py", line 4, in <module>
+    from . import server
+  File "/home/chen/termux-manager/Function/server.py", line 83
+    if time_difference_in_seconds > 5:
+                                      ^
+IndentationError: unindent does not match any outer indentation level
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
 Watching for file changes with StatReloader
-Error: That port is already in use.
+[18/Feb/2024 08:35:25] "GET /MCSM_server/?id=1000000000 HTTP/1.1" 200 7539
+[18/Feb/2024 08:35:26] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:27] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:28] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:29] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:30] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:30] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:35:31] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:32] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:33] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:34] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:35] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:36] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:37] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:38] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:39] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:40] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:41] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:42] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:43] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:44] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:46] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:47] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:48] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:49] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:50] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:51] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:52] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:53] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:54] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:55] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:56] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:57] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:58] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:35:59] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:01] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:03] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:05] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:06] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:07] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:08] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:09] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:10] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:11] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:12] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:13] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:14] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:16] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:17] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:18] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:19] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:20] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:21] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:22] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:23] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:24] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:25] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:26] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:27] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:28] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:29] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:30] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:31] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:32] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:32] "GET /MCSM_server/?id=1000000000 HTTP/1.1" 200 7539
+[18/Feb/2024 08:36:34] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:35] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:36] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:37] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:38] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:39] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:40] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:42] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:44] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:46] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:48] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:50] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:52] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:54] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:56] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:36:58] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:00] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:02] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:04] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:06] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:08] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:10] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:12] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:14] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:16] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:18] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:20] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:22] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:24] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:26] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:28] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:30] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:32] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:34] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:36] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:38] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:40] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:42] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:44] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:46] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:48] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:50] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:37:52] "POST /MCSM_server/ HTTP/1.1" 200 80
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:35:11
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server: 启动
 Watching for file changes with StatReloader
-Error: That port is already in use.
+Internal Server Error: /MCSM_server/
+Traceback (most recent call last):
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/chen/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chen/termux-manager/Function/server.py", line 84, in MCSM_server
+    html = JsonResponse({'data' : '暂无输出或终端内容过期 >> ' + time_difference_in_seconds + '\n'})
+TypeError: can only concatenate str (not "float") to str
+[18/Feb/2024 08:37:55] "POST /MCSM_server/ HTTP/1.1" 500 60923
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:37:54
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
 Watching for file changes with StatReloader
-Error: That port is already in use.
+[18/Feb/2024 08:38:11] "GET /MCSM_server/?id=1000000000 HTTP/1.1" 200 7539
+[18/Feb/2024 08:38:12] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:38:13] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:14] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:38:15] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:16] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:17] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:18] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:19] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:20] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:21] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:22] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:23] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:24] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:25] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:26] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:27] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:29] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:30] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:31] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:38:32] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:33] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:34] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:35] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:36] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:37] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:38] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:39] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:40] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:41] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:42] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:43] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:44] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:45] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:46] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:47] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:48] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:38:49] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:50] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:51] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:52] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:53] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:54] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:55] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:56] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:57] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:38:59] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:00] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:01] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:02] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:03] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:04] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:05] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:06] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:07] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:08] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:09] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:10] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:11] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:12] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:39:13] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:14] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:15] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:16] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:39:17] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:18] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:19] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:21] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:22] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:23] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:24] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:39:25] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:26] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:27] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:28] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:29] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:30] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:31] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:32] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:33] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:34] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:35] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:36] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:37] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:38] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:39] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:40] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:41] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:42] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:43] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:39:44] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:39:45] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:46] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:48] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:49] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:50] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:51] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:52] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:53] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:39:54] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:55] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:39:56] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:57] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:58] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:39:59] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:01] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:03] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:05] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:07] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:09] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:40:11] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:13] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:15] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:17] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:19] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:21] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:23] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:25] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:27] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:29] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:31] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:33] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:34] "POST /MCSM_server/ HTTP/1.1" 200 96
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:38:09
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
 Watching for file changes with StatReloader
-Error: That port is already in use.
+[18/Feb/2024 08:40:44] "GET /MCSM_server/?id=1000000000 HTTP/1.1" 200 7539
+[18/Feb/2024 08:40:45] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:46] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:47] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:48] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:49] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:50] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:51] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:52] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:53] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:40:54] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:56] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:40:58] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:41:00] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:41:02] "POST /MCSM_server/ HTTP/1.1" 200 94
+[18/Feb/2024 08:41:04] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:41:06] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:41:08] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:41:10] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:41:12] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:41:14] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:41:16] "POST /MCSM_server/ HTTP/1.1" 200 96
+[18/Feb/2024 08:41:18] "POST /MCSM_server/ HTTP/1.1" 200 95
+[18/Feb/2024 08:41:20] "POST /MCSM_server/ HTTP/1.1" 200 96
+/home/chen/termux-manager/Function/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:40:39
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
 Watching for file changes with StatReloader
-Error: That port is already in use.
+[18/Feb/2024 08:42:08] "GET /MCSM_server/?id=1000000000 HTTP/1.1" 200 7539
+[18/Feb/2024 08:42:09] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:10] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:11] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:12] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:13] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:14] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:15] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:16] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:17] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:18] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:19] "POST /MCSM_server/ HTTP/1.1" 200 76
+[18/Feb/2024 08:42:19] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:20] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:42:21] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:42:22] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:23] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:24] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:25] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:26] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:27] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:28] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:29] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:30] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:31] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:32] "POST /MCSM_server/ HTTP/1.1" 200 63
+[18/Feb/2024 08:42:33] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:42:33] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:34] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:36] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:37] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:38] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:39] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:40] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:41] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:42] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:43] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:44] "POST /MCSM_server/ HTTP/1.1" 200 77
+[18/Feb/2024 08:42:44] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:42:45] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:46] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:47] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:48] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:49] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:50] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:51] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:52] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:53] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:54] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:55] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:56] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:57] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:58] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:42:59] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:43:00] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:43:01] "POST /MCSM_server/ HTTP/1.1" 200 84
+[18/Feb/2024 08:43:01] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:43:02] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:03] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:04] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:05] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:06] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:07] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:09] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:10] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:11] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:12] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:13] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:14] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:15] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:16] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:17] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:18] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:19] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:20] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:21] "POST /MCSM_server/ HTTP/1.1" 200 92
+[18/Feb/2024 08:43:21] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:43:22] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:23] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:24] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:25] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:26] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:27] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:28] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:29] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:30] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:31] "POST /MCSM_server/ HTTP/1.1" 200 217
+[18/Feb/2024 08:43:31] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:43:32] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:33] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:34] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:35] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:36] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:38] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:39] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:40] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:41] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:42] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:43] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:44] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:45] "POST /MCSM_server/ HTTP/1.1" 200 223
+[18/Feb/2024 08:43:45] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:43:46] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:47] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:48] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:49] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:50] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:51] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:52] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:53] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:54] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:55] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:56] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:57] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:58] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:43:59] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:44:00] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:44:01] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:44:02] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:44:03] "POST /MCSM_server/ HTTP/1.1" 200 229
+[18/Feb/2024 08:44:04] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:44:04] "POST /MCSM_server/ HTTP/1.1" 200 236
+[18/Feb/2024 08:44:06] "POST /MCSM_server/ HTTP/1.1" 200 236
+[18/Feb/2024 08:44:07] "POST /MCSM_server/ HTTP/1.1" 200 236
+[18/Feb/2024 08:44:08] "POST /MCSM_server/ HTTP/1.1" 200 236
+[18/Feb/2024 08:44:09] "POST /MCSM_server/ HTTP/1.1" 200 236
+[18/Feb/2024 08:44:09] "POST /MCSM_server/ HTTP/1.1" 200 12
+[18/Feb/2024 08:44:10] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:11] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:12] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:13] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:14] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:15] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:16] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:17] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:18] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:19] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:20] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:20] "POST /MCSM_server/ HTTP/1.1" 200 49
+[18/Feb/2024 08:44:21] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:22] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:23] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:24] "POST /MCSM_server/ HTTP/1.1" 200 242
+[18/Feb/2024 08:44:25] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:26] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:27] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:28] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:29] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:30] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:31] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:32] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:33] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:35] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:36] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:37] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:37] "GET /default_man/ HTTP/1.1" 200 10319
+[18/Feb/2024 08:44:38] "POST /default_man/ HTTP/1.1" 200 517
+[18/Feb/2024 08:44:41] "GET /default_man/?id=9981 HTTP/1.1" 200 7224
+[18/Feb/2024 08:44:42] "POST /default_man/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:43] "POST /default_man/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:43] "POST /default_man/ HTTP/1.1" 200 54
+[18/Feb/2024 08:44:44] "POST /default_man/ HTTP/1.1" 200 80
+[18/Feb/2024 08:44:45] "POST /default_man/ HTTP/1.1" 200 132
+[18/Feb/2024 08:44:46] "POST /default_man/ HTTP/1.1" 200 132
+[18/Feb/2024 08:44:47] "POST /default_man/ HTTP/1.1" 200 132
+[18/Feb/2024 08:44:48] "POST /default_man/ HTTP/1.1" 200 132
+[18/Feb/2024 08:44:49] "POST /default_man/ HTTP/1.1" 200 12
+[18/Feb/2024 08:44:49] "POST /default_man/ HTTP/1.1" 200 132
+[18/Feb/2024 08:44:50] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:51] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:52] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:53] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:54] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:55] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:56] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:57] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:58] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:44:59] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:45:00] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:45:01] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:45:02] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:45:03] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:45:04] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:45:05] "POST /default_man/ HTTP/1.1" 200 272
+[18/Feb/2024 08:45:05] "POST /default_man/ HTTP/1.1" 200 12
+[18/Feb/2024 08:45:06] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:07] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:08] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:09] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:10] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:11] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:13] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:14] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:15] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:16] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:17] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:18] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:19] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:20] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:21] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:22] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:23] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:24] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:25] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:26] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:27] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:28] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:29] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:30] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:31] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:32] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:33] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:34] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:35] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:36] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:37] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:38] "POST /default_man/ HTTP/1.1" 200 412
+[18/Feb/2024 08:45:39] "GET /MCSM_server/ HTTP/1.1" 200 4702
+[18/Feb/2024 08:45:50] "GET /MCSM_server/?id=1000000000 HTTP/1.1" 200 7539
+[18/Feb/2024 08:45:51] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:45:52] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:45:53] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:45:54] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:45:55] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:45:56] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:45:57] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:45:59] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:01] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:03] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:05] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:07] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:09] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:11] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:13] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:15] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:17] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:19] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:21] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:23] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:25] "POST /MCSM_server/ HTTP/1.1" 200 80
+[18/Feb/2024 08:46:26] "POST /MCSM_server/ HTTP/1.1" 200 80
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 08:41:24
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+MCSM_server: 启动
+PID: 14331
+已关闭进程PID 14331
+ser: POST
+4235.186133
+4236.224706
+4236.737705
+4237.247697
+1.262342
+1.32618
+1.339318
+1.354455
+1.377232
+1.396559
+0.466547
+0.485339
+0.509531
+0.522181
+0.53797
+0.59632
+0.610669
+0.624526
+0.686006
+0.698982
+0.724371
+0.742791
+0.768832
+0.785245
+0.798017
+0.816883
+0.847163
+0.906126
+0.920645
+0.936936
+0.996003
+1.014623
+1.029262
+1.046163
+1.089138
+1.156186
+1.168964
+1.192339
+1.256018
+1.281591
+1.293875
+1.310344
+1.326433
+1.352236
+0.367472
+0.426053
+0.44537
+0.459928
+0.525978
+0.548284
+0.571358
+0.596566
+0.617482
+0.640954
+0.669394
+0.68368
+0.746028
 Watching for file changes with StatReloader
-Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 12:14:23
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
 Watching for file changes with StatReloader
-Error: That port is already in use.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 12:15:44
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 12:16:24
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 12:17:35
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 18, 2024 - 12:19:18
+Django version 5.0.2, using settings 'Termux管理器.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+

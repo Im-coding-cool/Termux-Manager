@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 10, in <module>
+    cursor.execute("SELECT * FROM current_time WHERE id=?", (1,))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 10, in <module>
+    cursor.execute("SELECT * FROM current_time WHERE id=?", (1,))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 21, in <module>
+    conn.commit()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 21, in <module>
+    conn.commit()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 6, in <module>
+    conn = sqlite3.connect('/home/chen/termux-manager/default/database/data.db')
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 24, in <module>
+    time.sleep(0.3)
+KeyboardInterrupt

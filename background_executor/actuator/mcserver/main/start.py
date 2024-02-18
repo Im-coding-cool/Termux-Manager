@@ -159,7 +159,15 @@ if __name__ == "__main__":
     runcom.start()
 
     # 执行命令
-    proc.stdin.write("sudo proot -0 -r /home/chen/proot/ubuntu/ -w /root bash")
+    # proc.stdin.write("sudo proot -0 -r /home/chen/proot/ubuntu/ -w /root bash\n")
+    # proc.stdin.flush()
+
+    # time.sleep(2)
+    # proc.stdin.write("336700zZ.\n")
+    # proc.stdin.flush()
+
+    time.sleep(0.5)
+    proc.stdin.write("pwd\n")
     proc.stdin.flush()
 
 
