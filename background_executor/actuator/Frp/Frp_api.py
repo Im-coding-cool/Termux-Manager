@@ -26,7 +26,7 @@ class actuator:
         try:
             output = subprocess.check_output(['pgrep', '-a', 'frpc'])
             lines = output.decode('utf-8').split('\n')
-            pids = [line.split()[0] for line in lines if '/home/chen/termux-manager/background_executor/actuator/Frp/frpc/frpc -c /home/chen/termux-manager/background_executor/actuator/Frp/frpc/frpc.toml' in line]
+            pids = [line.split()[0] for line in lines if frp_path + '/frpc -c ' + frp_path + '/frpc.toml' in line]
             return pids
         except subprocess.CalledProcessError:
             return []
@@ -50,7 +50,7 @@ class frp_controller:
         if sw == 'on':
             # 开启
             print('frp开启')
-            subprocess.run("nohup sh /home/chen/termux-manager/background_executor/actuator/Frp/frpc/qi.sh > /home/chen/termux-manager/background_executor/actuator/Frp/frpc/nohup.out 2>&1 &", shell=True)
+            subprocess.run("nohup sh " + frp_path + "/qi.sh > " + frp_path + "/nohup.out 2>&1 &", shell=True)
         elif sw == 'off':
             # 关闭
             print('frp关闭')
@@ -91,7 +91,7 @@ class frp_controller:
             message_data['data'][0]['switch'] = 'off'
 
         # 查看配置文件
-        with open(frp_path + '/' + 'frpc.ini', 'r', encoding='utf-8') as file:
+        with open(frp_path + '/' + 'frpc.toml', 'r', encoding='utf-8') as file:
             content = file.read()
         message_data['data'][0]['config'] = content
 
@@ -99,7 +99,7 @@ class frp_controller:
 
     # 修改器
     def revise(self, data):
-        with open(frp_path + '/frpc.ini', 'w', encoding='utf-8') as file:
+        with open(frp_path + '/frpc.toml', 'w', encoding='utf-8') as file:
             file.write(data['data'][0]['config'])
 
 

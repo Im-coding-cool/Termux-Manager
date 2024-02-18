@@ -31,6 +31,9 @@ if __name__ == "__main__":
     th2 = threading.Thread(target=cl, args=('rear_end','python3 ' + rear_end_path + 'main.py'))
     th2.start()
 
-    print('服务开启完毕')
+    print('\033[32m+服务开启完毕\033[0m')
+    print('请访问:\033[4m\033[31mhttp://0.0.0.0:8000/\033[0m\033[24m进入配置')
+    print('默认密钥为:\033[31mchen\033[0m')
+
 
 
