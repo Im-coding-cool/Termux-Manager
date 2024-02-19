@@ -1,1 +1,1 @@
-/home/chen/termux-manager/background_executor/actuator/Frp/frpc/frpc -c /home/chen/termux-manager/background_executor/actuator/Frp/frpc/frpc.toml
+/data/data/com.termux/files/home/termux-manager/background_executor/actuator/frpserver/frpc/termux/frpc -c /data/data/com.termux/files/home/termux-manager/background_executor/actuator/frpserver/frpc/termux/frpc.toml

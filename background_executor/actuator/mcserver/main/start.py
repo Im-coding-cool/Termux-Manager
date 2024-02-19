@@ -166,11 +166,14 @@ if __name__ == "__main__":
     # proc.stdin.write("336700zZ.\n")
     # proc.stdin.flush()
 
-    time.sleep(0.5)
-    proc.stdin.write("pwd\n")
+    proc.stdin.write("sh /data/data/com.termux/files/home/proot/start.sh\n")
     proc.stdin.flush()
 
+    proc.stdin.write("cd /opt/mcsmanager/\n")
+    proc.stdin.flush()
 
+    proc.stdin.write("sh start.sh\n")
+    proc.stdin.flush()
 
 
 

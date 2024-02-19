@@ -1,6 +1,0 @@
-2024/02/17 15:31:06 [1;34m[I] [root.go:142] start frpc service for config file [/home/chen/termux-manager/background_executor/actuator/Frp/frpc/frpc.toml][0m
-2024/02/17 15:31:06 [1;34m[I] [service.go:287] try to connect to server...[0m
-2024/02/17 15:31:06 [1;34m[I] [service.go:279] [99f3d6157b7ad88f] login to server success, get run id [99f3d6157b7ad88f][0m
-2024/02/17 15:31:06 [1;34m[I] [proxy_manager.go:173] [99f3d6157b7ad88f] proxy added: [test-tcp][0m
-2024/02/17 15:31:06 [1;34m[I] [control.go:170] [99f3d6157b7ad88f] [test-tcp] start proxy success[0m
-Killed

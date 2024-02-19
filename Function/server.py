@@ -9,7 +9,6 @@ import os
 import sqlite3
 from django.utils import timezone
 from datetime import datetime
-import pytz
 import threading
 
 
@@ -27,7 +26,7 @@ global_config.read(config_path) # 全局配置
 # 当前配置
 FRP_PATH = global_config.get('frp', 'root_path')
 DEFAULT_ROOT_PATH = global_config.get('default', 'root_path')
-TERMUX = global_config.get('config', 'termusx')
+TERMUX = global_config.get('config', 'termux')
 TIME_RECORDER_PATH = global_config.get('time_recorder', 'time_recorder_root_path')
 MCSERVER_ROOT_PATH = global_config.get('mcserver', 'root_path')
 FRPSERVER_ROOT_PATH = global_config.get('frpserver', 'root_path')
