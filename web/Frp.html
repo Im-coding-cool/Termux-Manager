@@ -31,6 +31,179 @@
       color: #999;
     }
   </style>
+  <script>
+    function sw(isw) {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            alert("命令发送成功");
+            setTimeout(function () {
+              window.location.reload();
+            }, 1000); // 延迟1秒后执行
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=sw&id=2000000000&sw=' + isw);
+    }
+
+    function bc() {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            alert("保存成功");
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+            alert("请求失败");
+          }
+        }
+      };
+      var t = document.getElementById("inp");
+      httpRequest.send('name=config&type=w&id=2000000000&data=' + t.value);
+    }
+
+    function get_config(){
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var result = JSON.parse(httpRequest.responseText);
+            var tml = result['r'];
+            console.log(tml);
+            var t = document.getElementById("inp");
+            t.value = tml;
+          } else {
+            //处理请求失败
+            console.log('配置请求失败');
+            alert("配置请求失败");
+          }
+        }
+      };
+      httpRequest.send('name=config&type=r&id=2000000000');
+    }
+
+    function doesNotContain(mainString, subString) {
+      return !mainString.includes(subString);
+    }
+
+    function zt() {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var result = JSON.parse(httpRequest.responseText);
+            var tml = result['data'];
+            console.log(tml)
+            var terminal = document.getElementById('state');
+            if (doesNotContain(tml, '暂无输出或终端内容过期') == true) {
+              terminal.innerHTML = '运行中';
+            }else{
+              terminal.innerHTML = '已停止';
+            }
+
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+            terminal.innerHTML = '请求失败';
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=terminal&id=2000000000');
+    }
+
+    // 用法示例
+    // console.log(doesNotContain("hello world", "foo")); // 输出 true
+    // console.log(doesNotContain("hello world", "world")); // 输出 false
+
+    var ii = '';
+    var zd;
+
+    function ter() {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var result = JSON.parse(httpRequest.responseText);
+            var tml = result['data'];
+            var zzz = document.getElementById('state');
+            if (doesNotContain(tml, '暂无输出或终端内容过期') == true) {
+              zzz.innerHTML = '运行中';
+            }else{
+              zzz.innerHTML = '已停止';
+            }
+            console.log(tml)
+            if (tml != ii) {
+              var terminal = document.getElementById('log');
+              terminal.innerHTML = '<span class="timestamp">日志:</span><br>';
+              ii = tml;
+              if (tml != 'NULL') {
+                // 使用\n作为分隔符拆分字符串
+                var arr = tml.split("\n");
+
+                // 遍历数组元素
+                arr.forEach(item => {
+                  if (item == '暂无输出或终端内容过期') {
+                    zd = 'NULL';
+                  } else {
+                    if (item != '') {
+                      if (zd == 'NULL') {
+                        zd = '';
+                        terminal.innerHTML = '';
+                      }
+                    }
+
+                  }
+                  terminal.innerHTML += '<span class="timestamp">' + item + '</span><br>';
+                  terminal.scrollTop = terminal.scrollHeight; // 滚动到底部
+                });
+
+              }
+            }
+
+            setTimeout(function () {
+              ter()
+              // console.log("Paused for 3 seconds");
+            }, 1000); // 延迟3秒后执行
+
+
+
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=terminal&id=2000000000');
+    }
+
+    get_config()
+    ter()
+  </script>
 </head>
 
 <body>
@@ -40,7 +213,8 @@
     <div class="card mb-3">
       <div class="card-header">服务状态</div>
       <div class="card-body">
-        <h5 class="card-title">{{ state }}</h5>
+        <h5 class="card-title" id="state"></h5>
+        <script>zt()</script>
       </div>
     </div>
 
@@ -51,33 +225,6 @@
         <button type="button" class="btn btn-danger" onclick="sw('OFF')"><i class="fas fa-stop"></i> 关闭</button>
         <!-- <button type="button" class="btn btn-warning" onclick="sw('ON')"><i
             class="fas fa-sync-alt"></i> 重启</button> -->
-        <script>
-          function sw(isw) {
-            var httpRequest = new XMLHttpRequest();
-            var url = "/Frp/";
-            httpRequest.open("POST", url, true);
-            httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            httpRequest.onreadystatechange = function () {
-              if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                if (httpRequest.status === 200) {
-                  //处理响应结果
-                  // var result = JSON.parse(httpRequest.responseText);
-                  alert('操作成功');
-                  window.location.reload();
-                } else {
-                  //处理请求失败
-                  alert('操作失败');
-                }
-              }
-            };
-
-            if (isw == 'ON') {
-              httpRequest.send("type=switch&switch=on");
-            } else if (isw == 'OFF') {
-              httpRequest.send("type=switch&switch=off");
-            }
-          }
-        </script>
       </div>
     </div>
 
@@ -97,33 +244,9 @@
       <div class="card-header">配置文件</div>
       <textarea name="textarea" cols="50" rows="10" id="inp">文本内容</textarea>
       <button onclick="bc()">保存</button>
-      <script>var t = document.getElementById("inp"); t.value = "{{ config }}";</script>
+      <!-- <script>var t = document.getElementById("inp"); t.value = "{{ config }}";</script> -->
     </div>
 
-    <script>
-      function bc() {
-        var t = document.getElementById("inp");
-        // console.log(t.value);
-        var httpRequest = new XMLHttpRequest();
-        var url = "/Frp/";
-        httpRequest.open("POST", url, true);
-        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        httpRequest.onreadystatechange = function () {
-          if (httpRequest.readyState === XMLHttpRequest.DONE) {
-            if (httpRequest.status === 200) {
-              //处理响应结果
-              // var result = JSON.parse(httpRequest.responseText);
-              alert('保存成功')
-            } else {
-              //处理请求失败
-              alert('保存失败');
-            }
-          }
-        };
-        httpRequest.send("type=revise&config=" + t.value);
-      }
-
-    </script>
 
     <!-- 日志展示区域 -->
     <div class="card">
@@ -152,113 +275,8 @@
       theme: "Highlight" // 设置主题为eclipse
     });
   </script>
-  <script>
-    var ii = '';
-    var zd;
-
-    function ter() {
-      var httpRequest = new XMLHttpRequest();
-      var url = "/Frp/";
-      httpRequest.open("POST", url, true);
-      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      httpRequest.onreadystatechange = function () {
-        if (httpRequest.readyState === XMLHttpRequest.DONE) {
-          if (httpRequest.status === 200) {
-            //处理响应结果
-            var result = JSON.parse(httpRequest.responseText);
-            var tml = result['log'];
-            console.log(tml)
-            if (tml != ii) {
-              ii = tml;
-              if (tml != 'NULL') {
-                // 使用\n作为分隔符拆分字符串
-                var arr = tml.split("\n");
-
-                // 遍历数组元素
-                arr.forEach(item => {
-                  var terminal = document.getElementById('log');
-                  // if (item == '暂无输出或终端内容过期') {
-                  //   zd = 'NULL';
-                  // } else {
-                  //   if (item != '') {
-                  //     if (zd == 'NULL') {
-                  //       zd = '';
-                  //       terminal.innerHTML = '';
-                  //     }
-                  //   }
-
-                  // }
-                  terminal.innerHTML += '<span class="timestamp">' + item + '</span></br>';
-                  terminal.scrollTop = terminal.scrollHeight; // 滚动到底部
-                });
-
-              }
-            }
-
-            setTimeout(function () {
-              ter()
-              // console.log("Paused for 3 seconds");
-            }, 1000); // 延迟3秒后执行
-
-
-
-          } else {
-            //处理请求失败
-            console.log('请求失败');
-          }
-        }
-      };
-      httpRequest.send('type=log');
-    }
-
-    ter()
-  </script>
 
 </body>
 
 </html>
 
-
-<!-- python模拟POST代码 -->
-
-<!-- import requests
-import json
-
-def start_task(message_data):
-    data = message_data
-    url = 'http://127.0.0.1:1234/api'
-    try:
-        r = requests.post(url,data=json.dumps(data))
-        return r.json()
-    except:
-        return '错误'
-
-if __name__ == '__main__':
-    message_data = {
-        'name' : 'frp_sw',
-        'request_type' : 'revise',
-        'data' : [{
-            'config' : '# 测试1\n# 测试2', 
-        }],
-    }
-    print(start_task(message_data)) -->
-
-
-
-
-<!-- json数据 -->
-<!-- 
-{
-  'name' : 'frp_sw',
-  'request_type' : 'revise',
-  'data' : [{
-      'config' : '文件提交内容', 
-  }],
-} -->
-
-<!-- POST参数 -->
-<!-- 
-mame(名称，固定为'frp_sw')
-request_type(请求类型，固定为'revise')
-config(输入框的内容)
--->

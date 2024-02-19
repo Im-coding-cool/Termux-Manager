@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!-- Bootstrap引用 -->
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="/static/js/MCSM_server.js"></script>
+  <style>
+    #terminal {
+      width: 80%;
+      height: 200px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: scroll;
+      margin-bottom: 10px;
+    }
+
+    #input {
+      width: 60%;
+    }
+
+    #sendButton {
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  {% include con %}
+  <form action="/Frp/" method="post">
+    <p>name:<input type="text" name="name"></p>
+    <p>type:<input type="text" name="type"></p>
+    <p>id:<input type="text" name="id"></p>
+    <p>sw:<input type="text" name="sw"></p>
+    <p>
+        <input type="submit">
+        <input type="reset">
+    </p>
+
+</form>
+
+  id: {{ id }}</br>
+  <button id="bu" onclick="sw('ON')">启动</button>
+  <button id="bu" onclick="sw('OFF')">关闭</button>
+
+  <!-- 终端窗口 -->
+  <div id="terminal">[系统提示]: 这个终端可能有点丑, 应为web前端页面开发者暂时离开, 希望不要介意。</div>
+  <input type="text" id="input" placeholder="Enter command...">
+  <button id="sendButton" onclick="sendCommand()">Send Command</button>
+
+  <script>
+    function sw(isw) {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var terminal = document.getElementById('terminal');
+            terminal.innerHTML += '<div>> 命令发送成功</div>';
+            terminal.scrollTop = terminal.scrollHeight; // 滚动到底部
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+            var terminal = document.getElementById('terminal');
+            terminal.innerHTML += '<div>> 命令发送失败</div>';
+            terminal.scrollTop = terminal.scrollHeight; // 滚动到底部
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=sw&id={{ id }}&sw=' + isw);
+    }
+
+    function sendCommand() {
+
+      var input = document.getElementById('input').value;
+      var terminal = document.getElementById('terminal');
+      // terminal.innerHTML += '<div>> ' + input + '</div>';
+      document.getElementById('input').value = ''; // 清空输入框
+      // terminal.scrollTop = terminal.scrollHeight; // 滚动到底部
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+          } else {
+            //处理请求失败
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=run_command&id={{ id }}&command=' + input);
+    }
+
+    var ii = '';
+    var zd;
+
+    function ter() {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var result = JSON.parse(httpRequest.responseText);
+            var tml = result['data'];
+            console.log(tml)
+            if (tml != ii) {
+              ii = tml;
+              if (tml != 'NULL') {
+                // 使用\n作为分隔符拆分字符串
+                var arr = tml.split("\n");
+
+                // 遍历数组元素
+                arr.forEach(item => {
+                  var terminal = document.getElementById('terminal');
+                  if (item == '暂无输出或终端内容过期') {
+                    zd = 'NULL';
+                  } else {
+                    if (item != '') {
+                      if (zd == 'NULL') {
+                        zd = '';
+                        terminal.innerHTML = '';
+                      }
+                    }
+
+                  }
+                  terminal.innerHTML += '<div>' + item + '</div>';
+                  terminal.scrollTop = terminal.scrollHeight; // 滚动到底部
+                });
+
+              }
+            }
+
+            setTimeout(function () {
+              ter()
+              // console.log("Paused for 3 seconds");
+            }, 1000); // 延迟3秒后执行
+
+
+
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=terminal&id={{ id }}');
+    }
+
+    ter()
+  </script>
+
+
+
+</body>
+
+</html>
