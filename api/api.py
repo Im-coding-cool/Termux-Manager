@@ -1,5 +1,5 @@
 import socket
-import socket
+import requests
 import threading
 import json
 import time
@@ -81,34 +81,13 @@ def return_data(client_socket):
 
 # 获得后端返回值
 def send_request_data(message_data):
-    global f_return_data 
-    # 调用链接函数
-    client_socket = link_server(message_data['name'])
-    if client_socket != '连接错误':
-        time.sleep(0.1)
-
-        # 发送消息
-        client_socket.send(json.dumps(message_data).encode() + '##END##'.encode())
-        time.sleep(0.1)
-
-
-        write_thread = threading.Thread(target=return_data, args=(client_socket, ))
-        write_thread.start()
-
-        time.sleep(10)
-        if f_return_data == '':
-            f_return_data = '超时'
-            client_socket.close()
-        elif f_return_data == '连接出错':
-            f_return_data = '连接出错'
-        # write_thread.join
-
-
-
-        return f_return_data
-    else:
-        return client_socket
-    # return return_data(client_socket)
+    data = message_data
+    url = 'http://127.0.0.1:1234/api'
+    try:
+        r = requests.post(url,data=json.dumps(data))
+        return r.json()
+    except:
+        return '超时'
 
     
 
@@ -119,21 +98,13 @@ def send_request_data(message_data):
 
 # 发起任务
 def start_task(message_data):
-    # message_data = {
-    #     'name' : 'mcsm_sw', # 名称 mcsm_sw
-    #     'request_type' : 'task', # 请求类型 task(任务) check(查看) return_data(返回数据)
-
-    #     # 任务详情 data(任务数据)
-    #     'data' : [{
-    #         'switch' : 'on' # 开关 on开启 off关闭
-    #     }], 
-    # }
-
-    # 调用send_message发送任务
-    write_thread = threading.Thread(target=send_message, args=(message_data, ))
-    write_thread.start()
-    write_thread.join
-    return 0
+    data = message_data
+    url = 'http://127.0.0.1:1234/api'
+    try:
+        r = requests.post(url,data=json.dumps(data))
+        return r.json()
+    except:
+        return '超时'
 
 
 # 请求返回值

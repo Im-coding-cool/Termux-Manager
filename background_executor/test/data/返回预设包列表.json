@@ -1,0 +1,50 @@
+{
+    "我是注释" : "获取预设包列表",
+    "data" : [{
+        "quantity" : 10,
+        "list" : [
+            {
+                "id" : 1,
+                "name" : "我的世界Java1.19.2",
+                "author" : "官方",
+                "illustrate" : "我的世界1.19.2原版适用于Java客户端",
+                "package_link" : "http://xxx.xxx/api/?id=1"
+            },
+            {
+                "id" : 2,
+                "name" : "元神开服包",
+                "author" : "官方",
+                "illustrate" : "元神1.52.1.0版私服",
+                "package_link" : "http://xxx.xxx/api/?id=2"
+            },
+            {
+                "id" : 3,
+                "name" : "我的世界宝可梦互通服",
+                "author" : "小猫很好吃",
+                "illustrate" : "最新宝可梦互通服",
+                "package_link" : "http://xxx.xxx/api/?id=3"
+            },
+            {
+                "id" : 4,
+                "name" : "我的世界Java1.19.2",
+                "author" : "官方",
+                "illustrate" : "我的世界1.19.2原版适用于Java客户端",
+                "package_link" : "http://xxx.xxx/api/?id=1"
+            },
+            {
+                "id" : 5,
+                "name" : "我的世界Java1.19.2",
+                "author" : "官方",
+                "illustrate" : "我的世界1.19.2原版适用于Java客户端",
+                "package_link" : "http://xxx.xxx/api/?id=1"
+            },
+            {
+                "id" : 6,
+                "name" : "我的世界Java1.19.2",
+                "author" : "官方",
+                "illustrate" : "我的世界1.19.2原版适用于Java客户端",
+                "package_link" : "http://xxx.xxx/api/?id=1"
+            }
+        ]
+    }]
+}

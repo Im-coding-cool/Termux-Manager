@@ -7,32 +7,203 @@
   <title>后台管理系统</title>
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/eclipse.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+  <link rel="stylesheet" href="../static/css/Frp.css">
   <style>
-    .log-container {
-      background-color: #f4f4f4;
-      padding: 10px;
-      border-radius: 5px;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-
-    .log-entry {
-      margin-bottom: 8px;
-      padding: 8px;
-      border-radius: 3px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .timestamp {
-      color: #888;
-      margin-right: 5px;
-    }
-
-    .message {
+    .test3 {
+      border: 1px solid #a0b3d6;
+      /*设置边框1px，实线，边框线色为#a0b3d6 */
+      width: 500px;
+      min-height: 200px;
+      font-size: 14px;
+      padding: 4px;
       color: #333;
+      outline: 0;
+      /* 当元素获得焦点的时候，焦点框为0.去掉虚线框（或高亮框）*/
+    }
+
+    /* 当输入框为空时，显示默认文字 */
+    .test3:empty::before {
+      content: attr(placeholder);
+      /*获取属性的值 attr（value）,可以获得属性值 */
+      color: #999;
     }
   </style>
+  <script>
+    function sw(isw) {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            alert("命令发送成功");
+            setTimeout(function () {
+              window.location.reload();
+            }, 1000); // 延迟1秒后执行
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=sw&id=2000000000&sw=' + isw);
+    }
+
+    function bc() {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            alert("保存成功");
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+            alert("请求失败");
+          }
+        }
+      };
+      var t = document.getElementById("inp");
+      httpRequest.send('name=config&type=w&id=2000000000&data=' + t.value);
+    }
+
+    function get_config(){
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var result = JSON.parse(httpRequest.responseText);
+            var tml = result['r'];
+            console.log(tml);
+            var t = document.getElementById("inp");
+            t.value = tml;
+          } else {
+            //处理请求失败
+            console.log('配置请求失败');
+            alert("配置请求失败");
+          }
+        }
+      };
+      httpRequest.send('name=config&type=r&id=2000000000');
+    }
+
+    function doesNotContain(mainString, subString) {
+      return !mainString.includes(subString);
+    }
+
+    function zt() {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var result = JSON.parse(httpRequest.responseText);
+            var tml = result['data'];
+            console.log(tml)
+            var terminal = document.getElementById('state');
+            if (doesNotContain(tml, '暂无输出或终端内容过期') == true) {
+              terminal.innerHTML = '运行中';
+            }else{
+              terminal.innerHTML = '已停止';
+            }
+
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+            terminal.innerHTML = '请求失败';
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=terminal&id=2000000000');
+    }
+
+    // 用法示例
+    // console.log(doesNotContain("hello world", "foo")); // 输出 true
+    // console.log(doesNotContain("hello world", "world")); // 输出 false
+
+    var ii = '';
+    var zd;
+
+    function ter() {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/Frp/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var result = JSON.parse(httpRequest.responseText);
+            var tml = result['data'];
+            var zzz = document.getElementById('state');
+            if (doesNotContain(tml, '暂无输出或终端内容过期') == true) {
+              zzz.innerHTML = '运行中';
+            }else{
+              zzz.innerHTML = '已停止';
+            }
+            console.log(tml)
+            if (tml != ii) {
+              var terminal = document.getElementById('log');
+              terminal.innerHTML = '<span class="timestamp">日志:</span><br>';
+              ii = tml;
+              if (tml != 'NULL') {
+                // 使用\n作为分隔符拆分字符串
+                var arr = tml.split("\n");
+
+                // 遍历数组元素
+                arr.forEach(item => {
+                  if (item == '暂无输出或终端内容过期') {
+                    zd = 'NULL';
+                  } else {
+                    if (item != '') {
+                      if (zd == 'NULL') {
+                        zd = '';
+                        terminal.innerHTML = '';
+                      }
+                    }
+
+                  }
+                  terminal.innerHTML += '<span class="timestamp">' + item + '</span><br>';
+                  terminal.scrollTop = terminal.scrollHeight; // 滚动到底部
+                });
+
+              }
+            }
+
+            setTimeout(function () {
+              ter()
+              // console.log("Paused for 3 seconds");
+            }, 1000); // 延迟3秒后执行
+
+
+
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=terminal&id=2000000000');
+    }
+
+    get_config()
+    ter()
+  </script>
 </head>
 
 <body>
@@ -42,40 +213,48 @@
     <div class="card mb-3">
       <div class="card-header">服务状态</div>
       <div class="card-body">
-        <h5 class="card-title">{{ state }}</h5>
+        <h5 class="card-title" id="state"></h5>
+        <script>zt()</script>
       </div>
     </div>
 
     <!-- 开关按钮组 -->
     <div class="mb-3">
       <div class="btn-group" role="group" aria-label="Control Buttons">
-        <button type="button" class="btn btn-success" onclick="sendGetRequestAndReloadPage('/api?type=frp&call=no')"><i class="fas fa-play"></i> 开启</button>
-        <button type="button" class="btn btn-danger" onclick="sendGetRequestAndReloadPage('/api?type=frp&call=off')"><i class="fas fa-stop"></i> 关闭</button>
-        <button type="button" class="btn btn-warning" onclick="sendGetRequestAndReloadPage('/api?type=frp&call=no')"><i class="fas fa-sync-alt"></i> 重启</button>
+        <button type="button" class="btn btn-success" onclick="sw('ON')"><i class="fas fa-play"></i> 开启</button>
+        <button type="button" class="btn btn-danger" onclick="sw('OFF')"><i class="fas fa-stop"></i> 关闭</button>
+        <!-- <button type="button" class="btn btn-warning" onclick="sw('ON')"><i
+            class="fas fa-sync-alt"></i> 重启</button> -->
       </div>
     </div>
 
     <!-- 配置文件表单 -->
     <div class="card mb-3">
-      <div class="card-header">配置文件</div>
+      <div class="card-header">配置文件(该输入框暂时无法提交更改，请将页面拉至底部那里还有一个配置框。)</div>
       <div class="card-body">
         <form action="Hdemo01.html" method="post">
-          <div class="form-group">
-            <label for="configFile">文件路径:</label>
-            <input type="text" class="form-control" id="configFile" name="username">
-          </div>
+          <div id="editor"></div>
+
+
           <button type="submit" class="btn btn-primary">保存</button>
         </form>
       </div>
     </div>
+    <div class="card mb-3">
+      <div class="card-header">配置文件</div>
+      <textarea name="textarea" cols="50" rows="10" id="inp">文本内容</textarea>
+      <button onclick="bc()">保存</button>
+      <!-- <script>var t = document.getElementById("inp"); t.value = "{{ config }}";</script> -->
+    </div>
+
 
     <!-- 日志展示区域 -->
     <div class="card">
       <div class="card-header">日志</div>
       <div class="card-body">
         <div class="log-container">
-          <div class="log-entry">
-            <span class="timestamp">我是日志内容</span>
+          <div class="log-entry" id="log">
+            <span class="timestamp">日志:</span><br>
           </div>
           <!-- 更多日志条目可以在这里添加 -->
         </div>
@@ -86,6 +265,18 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="../static/js/Frp.js"></script>
+  <script>
+    // 初始化CodeMirror编辑器
+    var editor = CodeMirror(document.getElementById('editor'), {
+      value: "{{ config }}",
+      mode: "text/x-custom-ini", // 使用自定义INI模式
+      lineNumbers: true,
+      theme: "Highlight" // 设置主题为eclipse
+    });
+  </script>
+
 </body>
 
 </html>
+

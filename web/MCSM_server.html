@@ -11,17 +11,69 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
   <script src="/static/js/MCSM_server.js"></script>
-  <style>
-    .container {
-      margin-top: 20px;
+  <link rel="stylesheet" href="../static/css/MCSM_server.css">
+  <script>
+    function sw(isw) {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/MCSM_server/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            alert("命令发送成功");
+            setTimeout(function () {
+              window.location.reload();
+            }, 1000); // 延迟1秒后执行
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=sw&id=1000000000&sw=' + isw);
     }
 
-    .card {
-      margin-bottom: 20px;
+    function doesNotContain(mainString, subString) {
+      return !mainString.includes(subString);
     }
-  </style>
+
+    // 用法示例
+    // console.log(doesNotContain("hello world", "foo")); // 输出 true
+    // console.log(doesNotContain("hello world", "world")); // 输出 false
+
+    function ter() {
+      var httpRequest = new XMLHttpRequest();
+      var url = "/MCSM_server/";
+      httpRequest.open("POST", url, true);
+      httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            //处理响应结果
+            var result = JSON.parse(httpRequest.responseText);
+            var tml = result['data'];
+            console.log(tml)
+            var terminal = document.getElementById('state');
+            if (doesNotContain(tml, '暂无输出或终端内容过期') == true) {
+              terminal.innerHTML = '运行中';
+            }else{
+              terminal.innerHTML = '已停止';
+            }
+
+          } else {
+            //处理请求失败
+            console.log('请求失败');
+            terminal.innerHTML = '请求失败';
+          }
+        }
+      };
+      httpRequest.send('name=editing&type=terminal&id=1000000000');
+    }
+  </script>
+
 </head>
 
 <body>
@@ -32,7 +84,8 @@
       <div class="card-body">
         <div class="row">
           <div class="col-sm-3">当前状态：</div>
-          <div class="col-sm-9">{{ state }}</div>
+          <div class="col-sm-9" id="state"></div>
+          <script>ter()</script>
         </div>
         <div class="row">
           <div class="col-sm-3">版本：</div>
@@ -46,10 +99,10 @@
       <div class="card-body">
         <div class="row">
           <div class="col-sm-6">
-            <button onclick="sendGetRequestAndReloadPage('/api?type=mcsm_off_on&call=no')" class="btn btn-primary">开启服务</button>
+            <button onclick="sw('ON')" class="btn btn-primary">开启服务</button>
           </div>
           <div class="col-sm-6">
-            <button onclick="sendGetRequestAndReloadPage('/api?type=mcsm_off_on&call=off')" class="btn btn-danger">关闭服务</button>
+            <button onclick="sw('OFF')" class="btn btn-danger">关闭服务</button>
           </div>
         </div>
       </div>
@@ -60,16 +113,16 @@
       <div class="card-body">
         <div class="row">
           <div class="col-sm-3">
-            <button class="btn btn-outline-danger" onclick="window.location.href='/1'">永久删除面板</button>
+            <button class="btn btn-outline-danger" onclick="window.location.href='/friendly_reminder'">永久删除面板</button>
           </div>
           <div class="col-sm-3">
-            <button class="btn btn-outline-warning" onclick="window.location.href='/1'">重置面板</button>
+            <button class="btn btn-outline-warning" onclick="window.location.href='/friendly_reminder'">重置面板</button>
           </div>
           <div class="col-sm-3">
-            <button class="btn btn-outline-secondary" onclick="window.location.href='/1'">切换版本</button>
+            <button class="btn btn-outline-secondary" onclick="window.location.href='/friendly_reminder'">切换版本</button>
           </div>
           <div class="col-sm-3">
-            <button class="btn btn-outline-primary" onclick="window.location.href='/1'">升级面板</button>
+            <button class="btn btn-outline-primary" onclick="window.location.href='/friendly_reminder'">升级面板</button>
           </div>
         </div>
       </div>

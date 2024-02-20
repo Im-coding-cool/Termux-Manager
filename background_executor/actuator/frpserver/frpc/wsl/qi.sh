@@ -1,0 +1,1 @@
+/home/chen/termux-manager/background_executor/actuator/frpserver/frpc/wsl/frpc -c /home/chen/termux-manager/background_executor/actuator/frpserver/frpc/wsl/frpc.toml

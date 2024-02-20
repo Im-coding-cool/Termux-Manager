@@ -6,45 +6,14 @@
   <title>发送了错误</title>
   <link href="https://cdn.bootcss.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-  <style>
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .triangle-icon {
-      color: #dc3545;
-      font-size: 5em;
-    }
-    
-    #logOutput {
-    /* 设置高度和滚动 */
-    height: 300px; /* 或根据需要调整 */
-    overflow-y: auto;
-    
-    /* 边框和背景 */
-    border: 1px solid #ced4da; /* 使用Bootstrap的边框颜色 */
-    background-color: #f8f9fa; /* 浅灰色背景，稍微深于 bg-light */
-    
-    /* 文本样式 */
-    color: #343a40; /* 深色文本 */
-    font-family: monospace; /* 使用等宽字体提升日志的可读性 */
-    
-    /* 内边距 */
-    padding: 1rem;
-    
-    /* 圆角 */
-    border-radius: 0.25rem;
-}
-  </style>
+  <link rel="stylesheet" href="../stats/css/error.css">
 </head>
 <body>
   <div class="text-center">
     <i class="fas fa-exclamation-triangle triangle-icon"></i>
     <h1>抱歉，页面出错了！</h1>
     <p>我们很抱歉，但是当前页面无法访问。</p>
-     <span>错误码:{{ xxx }}</span>
+     <span>错误码:{{ error_code }}</span>
      <br/>
      日志输出：
      <div id="logOutput" class="border bg-light p-3" style="height: 200px; overflow-y: scroll;">

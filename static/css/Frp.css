@@ -1,0 +1,44 @@
+ .cm-s-eclipse .ini-section {
+   color: purple;
+ }
+
+ /* 节名称的颜色 */
+ .cm-s-eclipse .ini-variable {
+   color: blue;
+ }
+
+ /* 变量名的颜色 */
+ .cm-s-eclipse .ini-equals {
+   color: red;
+ }
+
+ /* 等号的颜色 */
+ .cm-s-eclipse .ini-value {
+   color: green;
+ }
+
+ /* 值的颜色 */
+ .log-container {
+   background-color: #f4f4f4;
+   padding: 10px;
+   border-radius: 5px;
+   max-height: 300px;
+   overflow-y: auto;
+ }
+
+ .log-entry {
+   margin-bottom: 8px;
+   padding: 8px;
+   border-radius: 3px;
+   background-color: #ffffff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .timestamp {
+   color: #888;
+   margin-right: 5px;
+ }
+
+ .message {
+   color: #333;
+ }

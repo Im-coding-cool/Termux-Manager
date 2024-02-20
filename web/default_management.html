@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Bootstrap引用 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="/static/js/MCSM_server.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    {% include con %}
+
+    <div>
+        <div>
+            <h3>当前任务<h6>0个<div><button onclick="openPopup()">显示任务列表</button>
+
+                        <!-- 弹窗 -->
+                        <div id="popup"
+                            style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f9f9f9; padding: 20px;">
+                            <h2>任务列表</h2>
+                            <table id="task-table">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>名称</th>
+                                    <th>当前状态</th>
+                                </tr>
+                            </table>
+                            <button onclick="closePopup()">关闭</button>
+                        </div>
+
+                        <script>
+                            function openPopup() {
+                                const popup = document.getElementById('popup');
+                                popup.style.display = 'block';
+
+                                // 创建任务数据
+                                const tasks = [
+                                    { id: 1, name: '我的世界Java，基岩互通一键开服包', status: '进行中' },
+                                    { id: 2, name: '我的世界宝可梦互通互通开服包', status: '暂停' },
+                                    { id: 3, name: '元神私服一键开服包', status: '完成' },
+                                    { id: 4, name: '个人博客网站', status: '进行中' },
+                                    { id: 5, name: '任务5', status: '等待中' },
+                                    { id: 6, name: '任务6', status: '进行中' }
+                                ];
+
+                                // 获取表格
+                                const table = document.getElementById('task-table');
+
+                                // 更新表格内容
+                                tasks.forEach((task) => {
+                                    const row = table.insertRow(-1);
+                                    const cell1 = row.insertCell(0);
+                                    const cell2 = row.insertCell(1);
+                                    const cell3 = row.insertCell(2);
+
+                                    cell1.innerHTML = task.id;
+                                    cell2.innerHTML = task.name;
+                                    cell3.innerHTML = task.status;
+                                });
+                            }
+
+                            function closePopup() {
+                                const popup = document.getElementById('popup');
+                                popup.style.display = 'none';
+                                // 清空表格内容
+                                const table = document.getElementById('task-table');
+                                table.innerHTML = '<tr><th>ID</th><th>名称</th><th>当前状态</th></tr>';
+                            }
+                        </script>
+                    </div>
+                </h6>
+            </h3>
+            <input type="text" name="搜索">
+            <button>搜索</button>
+            <button>预设商店</button>
+        </div>
+        <!-- <div>
+            <table id="data-table">
+                <tr>
+                    <th>名称</th>
+                    <th>运行状态</th>
+                    <th>备注</th>
+                    <th>管理</th>
+                </tr>
+            </table>
+
+            <script>
+                // 创建数据
+                const data = [
+                    { name: '元神模组一键开服包', status: '运行中', note: '小明一键开服包' },
+                    { name: '我的世界互通大哥大模组', status: '停止', note: '作者:大哥我错了' },
+                    { name: '自动Frp', status: '停止', note: '请在浏览器输入http://127.0.0.1:8809/配置您的樱花frp' },
+                    { name: '条目4', status: '停止', note: '备注4' },
+                    { name: '条目5', status: '运行中', note: '备注5' },
+                ];
+
+                // 获取表格
+                const table = document.getElementById('data-table');
+
+                // 遍历数据并创建行
+                data.forEach((item) => {
+                    const row = table.insertRow(-1);
+                    const cell1 = row.insertCell(0);
+                    const cell2 = row.insertCell(1);
+                    const cell3 = row.insertCell(2);
+                    const cell4 = row.insertCell(3);
+
+                    cell1.innerHTML = item.name;
+                    cell2.innerHTML = item.status;
+                    cell3.innerHTML = item.note;
+                    cell4.innerHTML = '<button>管理</button>';
+                });
+            </script>
+        </div>
+    </div>
+
+    测试----------------------
+    <form action="/default_man/" method="post">
+        <p>name:<input type="text" name="name"></p>
+        <p>type:<input type="text" name="type"></p>
+        <p>id:<input type="text" name="id"></p>
+        <p>
+            <input type="submit">
+            <input type="reset">
+        </p>
+
+    </form> -->
+    <!--  -->
+    <div id="aa" style="width: 100%;"></div>
+    <script>
+        var httpRequest = new XMLHttpRequest();
+        var url = "/default_man/";
+        httpRequest.open("POST", url, true);
+        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    //处理响应结果
+                    var result = JSON.parse(httpRequest.responseText);
+                    // var result = httpRequest.responseText;
+                    var htmlContent = '<h3>以下是预设列表</h3></br>';
+                    htmlContent += '<p>由于web前端开发者暂时离开,暂时无法维护UI界面,将就看吧。</p>';
+                    htmlContent += '<p>如果您愿意和我们一同开发,我们随时欢迎。</p>';
+
+                    for (var i in result) {
+                        htmlContent += '<div class="row"><div class="col-md-6"><div class="card"><div class="card-body"><h5 class="card-title">名称: ' + result[i]['name'] + '</h5><p class="card-text">id: ' + result[i]['id'] + '</p><p class="card-text">介绍: ' + result[i]['introduce'] + '</p><button onclick="window.location.href=\'./?id=' + result[i]['id'] + '\'" class="btn btn-primary">管理</button></div></div></div></div>';
+                        // htmlContent = htmlContent + '<h3>id:' + result[i]['id'] + '</h3><h3>name:' + result[i]['name'] + '</h3><h3>介绍:' + result[i]['introduce'] + '</h3><button onclick=\"window.location.href='./?id=' + result[i]['id'] + ''" type=\"button\">管理</button></br>--------------------'
+                    }
+
+                    var targetDiv = document.getElementById('aa');
+                    targetDiv.innerHTML = htmlContent;
+
+
+                } else {
+                    //处理请求失败
+                    alert('请求失败');
+                }
+            }
+        };
+        httpRequest.send("name=default_man");
+    </script>
+
+</body>
+
+</html>

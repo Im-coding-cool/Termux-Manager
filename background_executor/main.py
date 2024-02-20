@@ -1,111 +1,162 @@
-import socket
-import threading
+from flask import Flask, request, jsonify
 import json
+import os
+import re
 import time
+import threading
+
+import wprint
+import actuator.Frp.Frp as frp
 
 
-# 创建套接字
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-# 获取本地主机名
-host = socket.gethostname()
-port = 6666
-
-# 绑定端口
-server_socket.bind((host, port))
-
-# 设置最大连接数，超过后排队
-server_socket.listen()
-
-# 用来存放所有客户端的信息
-clients = []
-nicknames = []
-
-# 处理客户端请求或响应
-def client_processing(id, client_json):
-    pass
 
 
-# 广播消息给所有客户端
-def broadcast(message):
-    for client in clients:
-        client.send(message + '##END##'.encode())
 
-# 处理接收到的消息
-def handle(client):
-    while True:
-        try:
-            # 接收消息
-            message = client.recv(1024)
-            messages = message.decode().split('##END##')
-            for message in messages:
-                if message != '':
-                    # broadcast(message)
-                    # 处理消息
-                    try:
-                        mc = json.loads(message)
-                        if mc["name"] == 'mcsm_sw' :
-                            if mc['request_type'] == 'task':
-                                broadcast('mcsm_sw想要执行任务'.encode())
-                                broadcast(message.encode())
-                            elif mc['request_type'] == 'check':
-                                broadcast('mcsm_sw想要查看后台状态'.encode())
-                                broadcast(message.encode())
-                        elif mc['name'] == 'mcsm_return':
-                            broadcast(message.encode())
-                        # 测试=========
-                        # 模拟返回数据
-                        # message_data = {
-                        #     'name' : 'mcsm_return', # 名称 mcsm_sw
-                        #     'request_type' : 'return_data', # 请求类型 task(任务) check(查看) return_data(返回数据)
+# 加载配置文件
+import configparser
+import global_configuration
+config_path = global_configuration.ROOT_PSTH
+config_path = config_path + 'config/config.ini'
+global_config = configparser.ConfigParser()
+global_config.read(config_path) # 全局配置
 
-                        #     # 任务详情 data(任务数据)
-                        #     'data' : [{
-                        #         'switch' : 'off' # 开关 on开启 off关闭
-                        #     }], 
-                        # }
-                        # time.sleep(0.1)
-                        # broadcast(json.dumps(message_data).encode())
-                        # =============
-                    except:
-                        print('转换失败')
-                        broadcast(message.encode())
-                else:
-                    broadcast(message.encode())
-        except:
-            # 如果出错，移除客户端并关闭连接
-            index = clients.index(client)
-            clients.remove(client)
-            client.close()
-            nickname = nicknames[index]
-            broadcast(f'{nickname} 客户端已关闭.'.encode())
-            nicknames.remove(nickname)
+# 当前配置
+PATH = global_config.get('rear_end', 'path')
+
+
+# 数据交换目录
+根目录 = PATH + 'data'
+
+# 临时储存返回结果
+return_res = 'f'
+
+# 倒计时器临时返回
+tie = 5
+
+# 倒计时器
+def timerr(te):
+    global tie
+    time.sleep(te)
+    tie = 0
+    
+
+# 写入任务
+def 写入任务(file, message_data):    
+    # 以覆盖方式写入文件，如果没有该文件就创建一个
+    with open(根目录 + '/' + file, 'w') as filee:
+        filee.write(json.dumps(message_data))
+
+app = Flask(__name__)
+app.debug = True
+
+
+# 获取返回结果
+def return_results(type):
+    global return_res
+    global tie
+    i = 0
+    while tie > 0:
+        file_list = os.listdir(根目录)
+        for file in file_list:
+            if type in file:
+                result = re.search(r'-(.*?)-', file)
+                if result:
+                    wprint.wprint(result.group(1))
+                    while True:
+                        try:
+                            with open(根目录 + '/' + file, 'r') as f:
+                                data = json.load(f)
+                            os.remove(根目录 + '/-1-' + type + '.json')
+                            return_res = data
+                            i = 1
+                            break
+                        except:
+                            pass
+        if i == 1:
             break
 
-# 循环接受新的连接
-def receive():
-    while True:
-        # 接受连接
-        client, address = server_socket.accept()
-        print(f"连接成功，{str(address)}")
+    
 
-        # 获取用户昵称
-        client.send('NICK'.encode()) # 双端确认
-        nickname = client.recv(1024).decode()
-        nicknames.append(nickname)
-        clients.append(client)
 
-        # 广播新用户加入
-        print(f'客户端：{nickname}已连接.') # 后台提示客户端名称
-        broadcast(f'{nickname} 成功加入！'.encode()) # 广播客户端名称
+# 任务处理
+def task_processor(student_json):
+    global tie
+    global return_res
+    mc = student_json
+    if mc["name"] == 'mcsm_sw' : # MCSM面板相关
+        if mc['request_type'] == 'task':
+            wprint.wprint('mcsm_执行任务')
+            file_list = os.listdir(根目录)
+            number = 1
+            for file in file_list:
+                if 'mcsm_sw' in file:
+                    result = re.search(r'-(.*?)-', file)
+                    if result:
+                        wprint.wprint(result.group(1))
+                        if int(result.group(1)) > number:
+                            number = result.group(1)
+            # 写入任务
+            写入任务('-' + str(number) + '-mcsm_sw.json', student_json)
+            return student_json
+        elif mc['request_type'] == 'check':
+            wprint.wprint('mcsm_查看状态')
+            file_list = os.listdir(根目录)
+            number = 1
+            for file in file_list:
+                if 'mcsm_sw' in file:
+                    result = re.search(r'-(.*?)-', file)
+                    if result:
+                        wprint.wprint(result.group(1))
+                        if int(result.group(1)) > number:
+                            number = result.group(1)
+            # 写入任务
+            写入任务('-' + str(number) + '-mcsm_sw.json', student_json)
+            tie = 5
+            return_res = 'f'
+            wprint.wprint('线程1')
+            thread1 = threading.Thread(target=return_results, args=('mcsm_return',))
+            thread1.start() # 获取返回结果
 
-        # 开始处理用户消息
-        thread = threading.Thread(target=handle, args=(client,))
-        thread.start()
+            wprint.wprint('线程2')
+            thread2 = threading.Thread(target=timerr, args=(5,))
+            thread2.start()
+            while tie > 0:
+                time.sleep(0.1)
+                if return_res != 'f':
+                    student_json = return_res
+                    break
+            else:
+                student_json = '超时'
+            
+            thread1.join()
+            return student_json
+    elif mc['name'] == 'frp_sw': # frp相关
+        if mc['request_type'] == 'task':
+            wprint.wprint('frp_执行任务')
+            frp.执行(mc)
+            return student_json
+        elif mc['request_type'] == 'check':
+            wprint.wprint('frp_查看状态')
+            student_json = frp.执行(mc)
+            return student_json
+        elif mc['request_type'] == 'revise':
+            wprint.wprint('frp_修改配置')
+            frp.执行(mc)
+            return student_json
 
-print("后端服务已启动")
-print('等待连接...')
+@app.route('/api',methods=['post'])
+def add_stu():
+    if  not request.data:   #检测是否有数据
+        return ('fail')
+    student = request.data.decode('utf-8')    #获取到POST过来的数据，因为我这里传过来的数据需要转换一下编码。根据晶具体情况而定
+    student_json = json.loads(student)    #把区获取到的数据转为JSON格式。
 
-# 运行主程序
+    # 处理操作
+    student_json = task_processor(student_json)
+
+    return jsonify(student_json)
+    #返回JSON数据。
+ 
 if __name__ == '__main__':
-    receive()
+    app.run(port=1234)
+    #这里指定了地址和端口号。

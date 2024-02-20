@@ -7,5 +7,6 @@ urlpatterns = [
     
     # path("", Login.Login), # 登录界面
     path("User_Agreement.txt/", menu.User_Agreement_txt), 
-    path("menu/", menu.menu), # 功能菜单（开始菜单）
+    path("menu/", menu.menu), # 功能菜单（开始菜单
+    path('friendly_reminder/', menu.friendly_reminder),
 ]
