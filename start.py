@@ -1,6 +1,10 @@
 import subprocess
 import threading
 import global_configuration
+import requests
+import os
+import random
+import time
 
 # 加载配置文件
 import configparser
@@ -24,6 +28,45 @@ def cl(name, sh):
         for line in process.stdout:
             print(line, end='', file=f, flush=True)  # 将输出写入日志文件
 
+# 生成随机id
+def generate_random_id():
+    return ''.join(str(random.randint(0, 9)) for _ in range(15))
+
+# 读取id如果不存在就创建
+def read_or_create_id(filename=global_configuration.ROOT_PSTH + 'config/id'):
+    if os.path.exists(filename):
+        # 如果文件存在，则读取其中的内容
+        with open(filename, 'r') as file:
+            user_id = file.read().strip()
+    else:
+        # 如果文件不存在，则生成一个随机id并写入文件
+        user_id = generate_random_id()
+        with open(filename, 'w') as file:
+            file.write(user_id)
+
+    return user_id
+
+
+
+def cloud_online_statistics(url):
+    result = subprocess.run('whoami', shell=True, capture_output=True, text=True).stdout
+    user_id = read_or_create_id()
+
+    while True:
+        # POST数据
+        data = {
+            'name': user_id,
+            'device_id': result,
+        }
+        # 发送POST请求
+        try:
+            response = requests.post(url, data=data)
+        except:
+            print('\033[31m错误: 服务器连接失败，但您任然可以使用本地功能。\033[0m')
+        time.sleep(20)
+
+
+
 
 if __name__ == "__main__":
     # 前端web程序
@@ -40,6 +83,11 @@ if __name__ == "__main__":
     th3 = threading.Thread(target=cl, args=('time_recorder','python3 ' + time_recorder_root_path + 'time_recorder.py'))
     th3.start()
     print('\033[1m\033[35m|=> 时间校准记录器: \033[22m\033[32m已启动\033[0m')
+
+    # 云端在线统计
+    th4 = threading.Thread(target=cloud_online_statistics, args=('http://38.6.175.125:8090/statistics.php',))
+    th4.start()
+    print('\033[1m\033[35m|=> 云端在线统计: \033[22m\033[32m已启动\033[0m')
 
     print('\033[32m+服务开启完毕\033[0m')
     print('请访问:\033[4m\033[31mhttp://0.0.0.0:8000/\033[0m\033[24m进入配置')
