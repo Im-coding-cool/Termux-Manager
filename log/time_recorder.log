@@ -31,3 +31,18 @@ Traceback (most recent call last):
   File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 24, in <module>
     time.sleep(0.3)
 KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 24, in <module>
+    time.sleep(0.3)
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 24, in <module>
+    time.sleep(0.3)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 24, in <module>
+Traceback (most recent call last):
+  File "/home/chen/termux-manager/time_recorder/time_recorder.py", line 24, in <module>
+    time.sleep(0.3)
+KeyboardInterrupt
