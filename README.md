@@ -16,17 +16,18 @@
 国际（国际）
 
 
-[恩]
+[EN]
 
-它是一个强大的Termux管理工具，您可以使用它来构建许多有趣的东西。
+It is a powerful Termux management tool that you can use to build many interesting things.
 
-例如：
+For example:
 
-管理termux（包括zerotermux和utermux），
-使用MCSM面板设置服务器（不仅仅是Minecraft服务器），
-建立一个网站，
-Genshin Impact服务器等。
+Manage termux (including zerotermux and utermux),
 
-国际（含中国）下载地址：http://38.6.175.125:5244/。
+Set up servers using the MCSM panel (not just Minecraft servers),
 
-注：这是一个未完成的项目。
+Establish a website,
+
+Genshin Impact servers, etc.
+
+Note: This is an unfinished project.
