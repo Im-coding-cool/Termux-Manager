@@ -12,7 +12,7 @@
  ， 原神服务器等。
 
 注：这是一个未完成的项目
-下载链接：https://pan.xn--fiq621n.xn--io0a7i/s/YoUA
+下载链接：https://ling.xn--fiq621n.xn--io0a7i/s/YoUA
 
 
 
@@ -32,4 +32,4 @@ Genshin Impact servers, etc.
 
 Note: This is an unfinished project.
 
-Download: https://pan.xn--fiq621n.xn--io0a7i/s/YoUA
+Download: https://ling.xn--fiq621n.xn--io0a7i/s/YoUA
